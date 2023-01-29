@@ -1,47 +1,7 @@
-/*-------------------------
-	Simple reset
---------------------------*/
-
-* {
-    margin: 0;
-    padding: 0;
+html{
+    scroll-behavior: smooth;
   }
-  
-  /*-------------------------
-      General Styles
-  --------------------------*/
-  
-  /*----------------------------
-          Headers
-  -----------------------------*/
-  
-  #fin {
-    font: 70px "Anton", Arial, Helvetica;
-    text-align: center;
-    padding-top: 300px;
-    text-transform: uppercase;
-    display: none;
-  }
-  
-  #fontPreload {
-    font-family: "Anton";
-    visibility: hidden;
-    position: absolute;
-  }
-  
-  /*----------------------------
-        Canvas Animations
-  -----------------------------*/
-  
   .canvas {
-    position: relative;
-    width: 717px;
-    height: 526px;
-  
-    top: 50%;
-    left: 50%;
-  
-    margin: -263px 0 0 -358px;
     opacity: 1;
   
     /* Configure the animation for Firefox */
@@ -56,7 +16,9 @@
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
   }
-  
+  .img-container img{
+    cursor: pointer;
+  }
   @-moz-keyframes spin {
     0% {
       opacity: 0.2;
@@ -65,7 +27,7 @@
   
     15% {
       opacity: 1;
-      margin: -263px 0 0 -358px;
+  
       -moz-transform: scale(1) rotate(1090deg);
     }
   
@@ -74,12 +36,6 @@
   
       -moz-transform: scale(1) rotate(1090deg);
     }
-  
-    /* 100%{
-          top:500%;
-          opacity:1;
-          -moz-transform:scale(1) rotate(1090deg);
-      } */
   }
   
   @-webkit-keyframes spin {
@@ -89,54 +45,42 @@
     }
     15% {
       opacity: 1;
-      margin: -263px 0 0 -358px;
+     
       -webkit-transform: scale(1) rotate(1090deg);
     }
     100% {
       opacity: 1;
       -webkit-transform: scale(1) rotate(1090deg);
     }
-  
-    /* 100%{
-          top:500%;
-          opacity:1;
-          -webkit-transform:scale(1) rotate(1090deg);
-      } */
   }
   .heroLanding {
     background-color: #333;
     height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .welcomeText {
-    /* font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-      "Arial", sans-serif; */
       font-family: 'Anton', sans-serif;	
-    position: relative;
+    text-align: center;
     color: #fcfcfc;
     font-weight: bold;
     font-size: 5rem;
-    /* width: 25vw; */
     opacity: 0;
-  
     margin-left: 2rem;
-    /* position: ; */
   }
   .welcomeAnimation {
-    /* Configure the animation for Firefox */
     opacity: 1;
-  
     -moz-animation-duration: 3s;
     -moz-animation-name: FlyIn;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: 1;
-  
-    /* Configure it for Chrome and Safari */
     -webkit-animation-duration: 3s;
     -webkit-animation-name: flyIn;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
   }
-  
   @-moz-keyframes flyIn {
     0% {
       opacity: 0;
@@ -155,12 +99,6 @@
       opacity: 0;
       top: -25%;
     }
-  
-    /* 100%{
-          top:500%;
-          opacity:1;
-          -moz-transform:scale(1) rotate(1090deg);
-      } */
   }
   @-webkit-keyframes flyIn {
     0% {
@@ -171,11 +109,6 @@
       top: 0%;
     }
   
-    /* 100%{
-          top:500%;
-          opacity:1;
-          -moz-transform:scale(1) rotate(1090deg);
-      } */
   }
   
   @media screen and (min-width: 990px) {
