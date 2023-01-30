@@ -145,10 +145,11 @@ html {
 /* background words */
 
 .bg-text-container {
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   /* left: 50%; */
   position: absolute;
   z-index: -999;
+  width: 100vw;
   overflow-x: hidden;
   transform: skewY(-5deg);
 }

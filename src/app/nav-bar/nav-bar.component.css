@@ -1,0 +1,40 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.navbar ul li a:hover {
+  color: white;
+  /* text-decoration: underline #fca311; */
+  border-bottom: 2px solid #fca311;
+  border-spacing: 3px;
+  /* text-decoration: ; */
+}
+
+.navbar ul li a:hover span {
+  font-size: large;
+  color: #fca311;
+}

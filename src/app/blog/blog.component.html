@@ -183,76 +183,230 @@
     <br><br>
 </div> -->
 <!-- [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }" -->
-<div class="container-fluid row">
-  <div
-    class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12"
-    *ngFor="let blog of news; let i = index"
-  >
-    <div *ngIf="i % 2 == 0" data-aos="fade-right">
-      <figure>
-        <div
-          class="media"
-          [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }"
-        ></div>
-        <figcaption>
-          <svg
-            viewBox="0 0 200 200"
-            version="1.1"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <mask id="mask" x="0" y="0" width="100%" height="100%">
-                <rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
-                <text class="title" dx="50%" dy="2.5em">CLICK</text>
-                <text class="title" dx="50%" dy="3.5em">FOR</text>
-                <text class="title" dx="50%" dy="4.5em">MORE</text>
-              </mask>
-            </defs>
-            <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
-          </svg>
-          <div class="body">
-            <p>
-              {{ blog.title }}
-            </p>
-          </div>
-        </figcaption>
-        <a href="#"></a>
-      </figure>
+<div style="border-radius: 1.5rem" data-aos="zoom-in">
+  <div class="px-3" style="text-align: center">
+    <h3
+      class="py-4"
+      style="color: aliceblue"
+      data-aos="zoom-in"
+      data-aos-duration="1700"
+    >
+      PHOTO GALLERY
+    </h3>
+    <div
+      class="flip mx-3"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+      (click)="check('sports')"
+    >
+      <div
+        class="front"
+        style="
+          background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+        "
+      >
+        <h1 class="text-shadow">Sports</h1>
+      </div>
+      <div class="back">
+        <h2>Angular</h2>
+        <p>
+          Good tools make application development quicker and easier to maintain
+          than if you did everything by hand..
+        </p>
+      </div>
     </div>
-    <div *ngIf="i % 2 == 1" data-aos="fade-left">
-      <figure>
-        <div
-          class="media"
-          [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }"
-        ></div>
-        <figcaption>
-          <svg
-            viewBox="0 0 200 200"
-            version="1.1"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <mask id="mask" x="0" y="0" width="100%" height="100%">
-                <rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
-                <text class="title" dx="50%" dy="2.5em">CLICK</text>
-                <text class="title" dx="50%" dy="3.5em">FOR</text>
-                <text class="title" dx="50%" dy="4.5em">MORE</text>
-              </mask>
-            </defs>
-            <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
-          </svg>
-          <div class="body">
-            <p>
-              Enamel pin selvage health goth edison bulb, venmo glossier
-              tattooed hella butcher cred iPhone. Plaid skateboard man braid
-              wayfarers.
-            </p>
-          </div>
-        </figcaption>
-        <a href="#"></a>
-      </figure>
+    <div
+      class="flip flip-vertical mx-3"
+      data-aos="zoom-in"
+      (click)="check('business')"
+    >
+      <div
+        class="front"
+        style="
+          background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+        "
+      >
+        <h1 class="text-shadow">Business</h1>
+      </div>
+      <div class="back">
+        <h2>Angular</h2>
+        <p>
+          Good tools make application development quicker and easier to maintain
+          than if you did everything by hand..
+        </p>
+      </div>
+    </div>
+    <div
+      class="flip mx-3"
+      data-aos="fade-left"
+      data-aos-duration="2000"
+      (click)="check('entertainment')"
+    >
+      <div
+        class="front"
+        style="
+          background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+        "
+      >
+        <h1 class="text-shadow">Entertainment</h1>
+      </div>
+      <div class="back">
+        <h2>Angular</h2>
+        <p>
+          Good tools make application development quicker and easier to maintain
+          than if you did everything by hand..
+        </p>
+      </div>
+    </div>
+    <div
+      class="flip flip-vertical mx-3"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+      (click)="check('technology')"
+    >
+      <div
+        class="front"
+        style="
+          background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+        "
+      >
+        <h1 class="text-shadow">Technology</h1>
+      </div>
+      <div class="back">
+        <h2>Angular</h2>
+        <p>
+          Good tools make application development quicker and easier to maintain
+          than if you did everything by hand..
+        </p>
+      </div>
+    </div>
+    <div class="flip mx-3" data-aos="zoom-in" (click)="check('health')">
+      <div
+        class="front"
+        style="
+          background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+        "
+      >
+        <h1 class="text-shadow">Health</h1>
+      </div>
+      <div class="back">
+        <h2>Angular</h2>
+        <p>
+          Good tools make application development quicker and easier to maintain
+          than if you did everything by hand..
+        </p>
+      </div>
+    </div>
+    <div
+      class="flip flip-vertical mx-3"
+      data-aos="fade-left"
+      data-aos-duration="2000"
+      (click)="check('science')"
+    >
+      <div
+        class="front"
+        style="
+          background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+        "
+      >
+        <h1 class="text-shadow">Science</h1>
+      </div>
+      <div class="back">
+        <h2>Angular</h2>
+        <p>
+          Good tools make application development quicker and easier to maintain
+          than if you did everything by hand..
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <br /><br />
+</div>
+<div class="container">
+  <div class="container-fluid row">
+    <div
+      class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12"
+      *ngFor="let blog of news; let i = index"
+    >
+      <div *ngIf="i % 2 == 0" data-aos="fade-right">
+        <figure>
+          <div
+            class="media"
+            [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }"
+          ></div>
+          <figcaption>
+            <svg
+              viewBox="0 0 200 200"
+              version="1.1"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <mask id="mask" x="0" y="0" width="100%" height="100%">
+                  <rect
+                    id="alpha"
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"
+                  ></rect>
+                  <text class="title" dx="50%" dy="2.5em">CLICK</text>
+                  <text class="title" dx="50%" dy="3.5em">FOR</text>
+                  <text class="title" dx="50%" dy="4.5em">MORE</text>
+                </mask>
+              </defs>
+              <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
+            </svg>
+            <div class="body">
+              <p>
+                {{ blog.title }}
+              </p>
+            </div>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div *ngIf="i % 2 == 1" data-aos="fade-left">
+        <figure>
+          <div
+            class="media"
+            [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }"
+          ></div>
+          <figcaption>
+            <svg
+              viewBox="0 0 200 200"
+              version="1.1"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <mask id="mask" x="0" y="0" width="100%" height="100%">
+                  <rect
+                    id="alpha"
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"
+                  ></rect>
+                  <text class="title" dx="50%" dy="2.5em">CLICK</text>
+                  <text class="title" dx="50%" dy="3.5em">FOR</text>
+                  <text class="title" dx="50%" dy="4.5em">MORE</text>
+                </mask>
+              </defs>
+              <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
+            </svg>
+            <div class="body">
+              <p>
+                Enamel pin selvage health goth edison bulb, venmo glossier
+                tattooed hella butcher cred iPhone. Plaid skateboard man braid
+                wayfarers.
+              </p>
+            </div>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
     </div>
   </div>
   <!-- <div data-aos="fade-left" class="col-lg-6 col-md-6 hidden-sm hidden-xs">
