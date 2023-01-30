@@ -1,6 +1,6 @@
 <!-- <div data-aos="fade-up-right"> -->
 <!-- https://codepen.io/steveeeie/pen/NVWMEM -->
-<div class="blog" style="border-radius: 2rem; background-color: #333;" data-aos="zoom-out">
+<!-- <div class="blog" style="border-radius: 2rem; background-color: #333;" data-aos="zoom-out">
     <div style="padding-top: 10px;" data-aos="zoom-in" data-aos-duration="1000">
         <h2 class="px-4" style="text-align: center; color: azure;">Breaking News</h2>
     </div>
@@ -181,4 +181,118 @@
         </div>
     </section>
     <br><br>
+</div> -->
+<!-- [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }" -->
+<div class="container-fluid row">
+  <div
+    class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12"
+    *ngFor="let blog of news; let i = index"
+  >
+    <div *ngIf="i % 2 == 0" data-aos="fade-right">
+      <figure>
+        <div
+          class="media"
+          [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }"
+        ></div>
+        <figcaption>
+          <svg
+            viewBox="0 0 200 200"
+            version="1.1"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <mask id="mask" x="0" y="0" width="100%" height="100%">
+                <rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
+                <text class="title" dx="50%" dy="2.5em">CLICK</text>
+                <text class="title" dx="50%" dy="3.5em">FOR</text>
+                <text class="title" dx="50%" dy="4.5em">MORE</text>
+              </mask>
+            </defs>
+            <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
+          </svg>
+          <div class="body">
+            <p>
+              {{ blog.title }}
+            </p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+    <div *ngIf="i % 2 == 1" data-aos="fade-left">
+      <figure>
+        <div
+          class="media"
+          [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }"
+        ></div>
+        <figcaption>
+          <svg
+            viewBox="0 0 200 200"
+            version="1.1"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <mask id="mask" x="0" y="0" width="100%" height="100%">
+                <rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
+                <text class="title" dx="50%" dy="2.5em">CLICK</text>
+                <text class="title" dx="50%" dy="3.5em">FOR</text>
+                <text class="title" dx="50%" dy="4.5em">MORE</text>
+              </mask>
+            </defs>
+            <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
+          </svg>
+          <div class="body">
+            <p>
+              Enamel pin selvage health goth edison bulb, venmo glossier
+              tattooed hella butcher cred iPhone. Plaid skateboard man braid
+              wayfarers.
+            </p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+  </div>
+  <!-- <div data-aos="fade-left" class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+    <figure>
+      <div
+        class="media"
+        style="
+          background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/bg_5.png);
+        "
+      ></div>
+      <figcaption>
+        <svg
+          viewBox="0 0 200 200"
+          version="1.1"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask id="mask" x="0" y="0" width="100%" height="100%">
+              <rect id="alpha" x="0" y="0" width="100%" height="100%"></rect>
+              <text
+                class="title"
+                style="text-shadow: 2px 2px #fca311"
+                dx="50%"
+                dy="2.5em"
+              >
+                ENJOY EVERY MOMENT
+              </text>
+            </mask>
+          </defs>
+          <rect id="base" x="0" y="0" width="100%" height="100%"></rect>
+        </svg>
+        <div class="body">
+          <p>
+            Enamel pin selvage health goth edison bulb, venmo glossier tattooed
+            hella butcher cred iPhone. Plaid skateboard man braid wayfarers.
+          </p>
+        </div>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+  </div> -->
 </div>
