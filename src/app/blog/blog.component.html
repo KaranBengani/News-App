@@ -183,8 +183,8 @@
     <br><br>
 </div> -->
 <!-- [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }" -->
-<app-nav-bar></app-nav-bar>
-<div style="border-radius: 1.5rem" class="container">
+
+<!-- <div style="border-radius: 1.5rem" class="container">
   <div class="px-3" style="text-align: center">
     <h3
       class="py-4"
@@ -328,7 +328,79 @@
     </div>
   </div>
   <br /><br />
+</div> -->
+
+<div class="container my-5">
+  <div class="row">
+    <h1 class="my-5 headingColor text-center">
+      <span>O</span>ur <span>C</span>ategories
+    </h1>
+    <div class="col-12 col-md-7">
+      <div class="category-cards"></div>
+      <div class="containers">
+        <div class="cards1">
+          <div class="cards card-one card-sports" (click)="check('sports')">
+            <h2 class="card-title">Sports</h2>
+
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              alias ut veniam?
+            </p>
+          </div>
+          <div class="cards card-one" (click)="check('business')">
+            <h2 class="card-title">Business</h2>
+
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              alias ut veniam?
+            </p>
+          </div>
+          <div class="cards card-two" (click)="check('health')">
+            <h2 class="card-title">Health</h2>
+
+            <p class="description">
+              If you read carefully, you'll find that this is not your typical
+              lorem ipsum.
+            </p>
+          </div>
+
+          <div class="cards card-three" (click)="check('entertainment')">
+            <h2 class="card-title">Entertainment</h2>
+
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              alias ut veniam?
+            </p>
+          </div>
+
+          <div class="cards card-four" (click)="check('technology')">
+            <h2 class="card-title">Technology</h2>
+
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              alias ut veniam?
+            </p>
+          </div>
+          <div class="cards card-one" (click)="check('science')">
+            <h2 class="card-title">Science</h2>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              alias ut veniam?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-5">
+      <img
+        src="../../assets/Hands holding mobile phones with news on screen.jpg"
+        alt=""
+        class="img-fluid"
+      />
+    </div>
+  </div>
 </div>
+
 <div class="container">
   <div class="container-fluid row">
     <div

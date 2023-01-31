@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'News-App';
+  checkView = true
+
+  viewMenu(event:boolean) {
+    this.checkView = event
+  }
+  newsMenu(event:boolean){
+    this.checkView = event
+  }
 }

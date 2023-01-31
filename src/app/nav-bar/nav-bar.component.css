@@ -17,7 +17,11 @@ p {
 }
 
 .navbar {
-  border: 2px solid #14213d;
-  border-radius: 15px;
+  /* border: 2px solid #14213d;
+  border-radius: 15px; */
   background-color: #e5e5e5;
+}
+
+.span {
+  color: #fca311;
 }

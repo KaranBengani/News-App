@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-
+  @Output() newsEvent = new EventEmitter<boolean>();
+  navClick(){
+    this.newsEvent.emit(true)
+  }
 }

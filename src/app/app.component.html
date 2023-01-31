@@ -1,24 +1,22 @@
-<div class="">
-  <div class="hero-landing">
-    <app-hero-landing></app-hero-landing>
+<div class="hero-landing" *ngIf="checkView">
+  <app-hero-landing></app-hero-landing>
+</div>
+<div class="news-paper" *ngIf="checkView">
+  <app-news-paper (navEvent)="viewMenu($event)"></app-news-paper>
+</div>
+
+<div class="photo">
+  <!-- <app-photo></app-photo> -->
+  <!-- <app-photo-gallery></app-photo-gallery> -->
+</div>
+<div *ngIf="!checkView">
+  <div class="nav-bar">
+    <app-nav-bar (newsEvent)="viewMenu($event)"></app-nav-bar>
   </div>
-  <div class="news-paper">
-    <app-news-paper></app-news-paper>
-  </div>
-  <br />
-  <br />
-  <br />
-  <div class="photo">
-    <app-photo></app-photo>
-  </div>
-  <br />
-  <br />
-  <br />
   <div class="blog">
     <app-blog></app-blog>
   </div>
-  <br />
-  <br />
+
   <!-- <div class="about">
     <app-about></app-about>
   </div> -->
