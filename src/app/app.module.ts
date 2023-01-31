@@ -12,6 +12,8 @@ import { BlogComponent } from './blog/blog.component';
 import { PhotoComponent } from './photo/photo.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LoginComponent } from './login/login.component';
+import { BlogmodalComponent } from './blogmodal/blogmodal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     AboutComponent,
     BlogComponent,
     PhotoComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginComponent,
+    BlogmodalComponent
   ],
   imports: [
     BrowserModule,

@@ -184,7 +184,7 @@
 </div> -->
 <!-- [ngStyle]="{ 'background-image': 'url(' + blog.urlToImage + ')' }" -->
 <app-nav-bar></app-nav-bar>
-<div style="border-radius: 1.5rem" data-aos="zoom-in">
+<div style="border-radius: 1.5rem" class="container">
   <div class="px-3" style="text-align: center">
     <h3
       class="py-4"
@@ -194,134 +194,139 @@
     >
       PHOTO GALLERY
     </h3>
-    <div
-      class="flip mx-3"
-      data-aos="fade-right"
-      data-aos-duration="2000"
-      (click)="check('sports')"
-    >
+    <div class="row">
       <div
-        class="front"
-        style="
-          background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-        "
+        class="flip col-12 col-md-4"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        (click)="check('sports')"
       >
-        <h1 class="text-shadow">Sports</h1>
+        <div
+          class="front"
+          style="
+            background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+          "
+        >
+          <h1 class="text-shadow">Sports</h1>
+        </div>
+        <div class="back">
+          <h2>Angular</h2>
+          <p>
+            Good tools make application development quicker and easier to
+            maintain than if you did everything by hand..
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Angular</h2>
-        <p>
-          Good tools make application development quicker and easier to maintain
-          than if you did everything by hand..
-        </p>
-      </div>
-    </div>
-    <div
-      class="flip flip-vertical mx-3"
-      data-aos="zoom-in"
-      (click)="check('business')"
-    >
       <div
-        class="front"
-        style="
-          background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-        "
+        class="flip flip-vertical col-12 col-md-4"
+        data-aos="zoom-in"
+        (click)="check('business')"
       >
-        <h1 class="text-shadow">Business</h1>
+        <div
+          class="front"
+          style="
+            background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+          "
+        >
+          <h1 class="text-shadow">Business</h1>
+        </div>
+        <div class="back">
+          <h2>Angular</h2>
+          <p>
+            Good tools make application development quicker and easier to
+            maintain than if you did everything by hand..
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Angular</h2>
-        <p>
-          Good tools make application development quicker and easier to maintain
-          than if you did everything by hand..
-        </p>
-      </div>
-    </div>
-    <div
-      class="flip mx-3"
-      data-aos="fade-left"
-      data-aos-duration="2000"
-      (click)="check('entertainment')"
-    >
       <div
-        class="front"
-        style="
-          background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-        "
+        class="flip col-12 col-md-4"
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        (click)="check('entertainment')"
       >
-        <h1 class="text-shadow">Entertainment</h1>
+        <div
+          class="front"
+          style="
+            background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+          "
+        >
+          <h1 class="text-shadow">Entertainment</h1>
+        </div>
+        <div class="back">
+          <h2>Angular</h2>
+          <p>
+            Good tools make application development quicker and easier to
+            maintain than if you did everything by hand..
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Angular</h2>
-        <p>
-          Good tools make application development quicker and easier to maintain
-          than if you did everything by hand..
-        </p>
-      </div>
-    </div>
-    <div
-      class="flip flip-vertical mx-3"
-      data-aos="fade-right"
-      data-aos-duration="2000"
-      (click)="check('technology')"
-    >
       <div
-        class="front"
-        style="
-          background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-        "
+        class="flip flip-vertical col-12 col-md-4"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        (click)="check('technology')"
       >
-        <h1 class="text-shadow">Technology</h1>
+        <div
+          class="front"
+          style="
+            background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+          "
+        >
+          <h1 class="text-shadow">Technology</h1>
+        </div>
+        <div class="back">
+          <h2>Angular</h2>
+          <p>
+            Good tools make application development quicker and easier to
+            maintain than if you did everything by hand..
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Angular</h2>
-        <p>
-          Good tools make application development quicker and easier to maintain
-          than if you did everything by hand..
-        </p>
-      </div>
-    </div>
-    <div class="flip mx-3" data-aos="zoom-in" (click)="check('health')">
       <div
-        class="front"
-        style="
-          background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-        "
+        class="flip col-12 col-md-4"
+        data-aos="zoom-in"
+        (click)="check('health')"
       >
-        <h1 class="text-shadow">Health</h1>
+        <div
+          class="front"
+          style="
+            background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+          "
+        >
+          <h1 class="text-shadow">Health</h1>
+        </div>
+        <div class="back">
+          <h2>Angular</h2>
+          <p>
+            Good tools make application development quicker and easier to
+            maintain than if you did everything by hand..
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Angular</h2>
-        <p>
-          Good tools make application development quicker and easier to maintain
-          than if you did everything by hand..
-        </p>
-      </div>
-    </div>
-    <div
-      class="flip flip-vertical mx-3"
-      data-aos="fade-left"
-      data-aos-duration="2000"
-      (click)="check('science')"
-    >
       <div
-        class="front"
-        style="
-          background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-        "
+        class="flip flip-vertical col-12 col-md-4"
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        (click)="check('science')"
       >
-        <h1 class="text-shadow">Science</h1>
-      </div>
-      <div class="back">
-        <h2>Angular</h2>
-        <p>
-          Good tools make application development quicker and easier to maintain
-          than if you did everything by hand..
-        </p>
+        <div
+          class="front"
+          style="
+            background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+          "
+        >
+          <h1 class="text-shadow">Science</h1>
+        </div>
+        <div class="back">
+          <h2>Angular</h2>
+          <p>
+            Good tools make application development quicker and easier to
+            maintain than if you did everything by hand..
+          </p>
+        </div>
       </div>
     </div>
   </div>
-
   <br /><br />
 </div>
 <div class="container">
@@ -330,7 +335,13 @@
       class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12"
       *ngFor="let blog of news; let i = index"
     >
-      <div *ngIf="i % 2 == 0" data-aos="fade-right">
+      <div
+        *ngIf="i % 2 == 0"
+        data-aos="fade-right"
+        data-bs-toggle="modal"
+        data-bs-target="#GFG1"
+        (click)="checkAuth(blog)"
+      >
         <figure>
           <div
             class="media"
@@ -368,7 +379,13 @@
           <a href="#"></a>
         </figure>
       </div>
-      <div *ngIf="i % 2 == 1" data-aos="fade-left">
+      <div
+        *ngIf="i % 2 == 1"
+        data-aos="fade-left"
+        data-bs-toggle="modal"
+        data-bs-target="#GFG1"
+        (click)="checkAuth(blog)"
+      >
         <figure>
           <div
             class="media"
@@ -450,4 +467,28 @@
       <a href="#"></a>
     </figure>
   </div> -->
+</div>
+
+<div class="container text-center">
+  <!-- <button type="button" class="btn btn-primary">
+    Click Me
+  </button> -->
+  <div class="modal fade" id="GFG1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <app-blogmodal [data]="selectedblog" *ngIf="modal"></app-blogmodal>
+          <app-login *ngIf="!modal"></app-login>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

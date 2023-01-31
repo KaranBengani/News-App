@@ -194,7 +194,7 @@
 @import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/variables.less");
 $body: #252830;
 body {
-  background-color: $body;
+  // background-color: $body;
   color: white;
   font-family: "Lato";
 }
@@ -279,13 +279,13 @@ svg {
   font-weight: normal;
 }
 
-body {
-  color: #555;
-  background: rgb(199, 174, 174);
-  text-align: center;
-  font-family: "Roboto Mono";
-  padding: 1em;
-}
+// body {
+//   color: #555;
+//   background: rgb(199, 174, 174);
+//   text-align: center;
+//   font-family: "Roboto Mono";
+//   padding: 1em;
+// }
 
 h1 {
   font-size: 2.2em;

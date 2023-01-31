@@ -92,7 +92,7 @@ html {
   /* color: #fcfcfc; */
   color: #333;
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 3rem;
   opacity: 0;
   margin-left: 2rem;
 }
@@ -142,6 +142,7 @@ html {
 @media screen and (min-width: 990px) {
   .welcomeText {
     top: -25%;
+    font-size: 5rem;
   }
 }
 

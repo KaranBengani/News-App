@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http'
 })
 export class BlogComponent {
   constructor(public http: HttpClient){}
+  modal:boolean=true;
+selectedblog:any="hello";
   news:any;
   ngOnInit(){
     this.http.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=5a15f82320c54c608c7370e6a1f5af00&limit=4').subscribe((res) => {
@@ -48,5 +50,16 @@ export class BlogComponent {
     else
       alert("failed")
   })
+ }
+ checkAuth(blog:any){
+  if(localStorage.getItem("eweekly_user")!=null){
+    
+    this.modal = false
+  }
+  else{
+    console.log(blog);
+    this.selectedblog = blog;
+    this.modal = true;
+  }
  }
 }

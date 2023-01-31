@@ -1,15 +1,23 @@
 p {
   font-family: Lato;
 }
-.navbar ul li a:hover {
-  color: grey;
-  /* text-decoration: underline #fca311; */
+.navAn li a:hover {
+  color: #14213d;
+  /* text-decoration: underline;
+  text-decoration-color: #fca311; */
   border-bottom: 2px solid #fca311;
-  border-spacing: 3px;
+  border-spacing: 2px;
   /* text-decoration: ; */
 }
 
-.navbar ul li a:hover span {
-  font-size: large;
+.navAn li a:hover span {
+  /* font-size: large; */
   color: #fca311;
+  font-weight: bold;
+}
+
+.navbar {
+  border: 2px solid #14213d;
+  border-radius: 15px;
+  background-color: #e5e5e5;
 }
