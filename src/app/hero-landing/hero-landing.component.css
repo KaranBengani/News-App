@@ -97,7 +97,7 @@ html {
   margin-left: 2rem;
 }
 .welcomeText span {
-  color: #fca311;
+  color: #14213D;
 }
 .welcomeAnimation {
   opacity: 1;
@@ -142,7 +142,7 @@ html {
 @media screen and (min-width: 990px) {
   .welcomeText {
     top: -25%;
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 
@@ -180,7 +180,7 @@ html {
   font-size: 280px;
   /* color: #e5e5e5; */
   color: transparent;
-  -webkit-text-stroke: 2px #fca311;
+  -webkit-text-stroke: 4px #FCA311;
   text-transform: uppercase;
   display: inline-block;
   line-height: 0.75;

@@ -112,6 +112,14 @@ main {
       grid-column: 1 / -2;
     }
   }
+  .remove{
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+  .main-title:hover > span{
+    color: #FCA311
+  }
   .terrarium {
     @media (min-width: 700px) {
       grid-column: 1 / -1;

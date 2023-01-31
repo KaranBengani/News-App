@@ -26,6 +26,11 @@
   font-size: 2em;
   overflow: hidden;
   padding: 2%;
+  /* border: solid 1px #FCA311; */
+}
+
+.container > a > img{
+  border: solid 2px #FCA311;
 }
 
 .container > a::after {
