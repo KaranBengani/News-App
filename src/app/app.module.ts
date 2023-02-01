@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { BlogmodalComponent } from './blogmodal/blogmodal.component';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BlogmodalComponent } from './blogmodal/blogmodal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
