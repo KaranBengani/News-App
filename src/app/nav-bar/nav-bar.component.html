@@ -69,7 +69,7 @@
           <a class="nav-link" href="#"><span>C</span>ategory</a>
         </li> -->
         <li class="nav-item mx-md-2">
-          <a class="nav-link" href="#"><span>N</span>ews</a>
+          <a class="nav-link" (click)="navNews()"><span>N</span>ews</a>
         </li>
         <li class="nav-item dropdown mx-md-2">
           <a
@@ -89,17 +89,20 @@
           </ul>
         </li>
         <li class="nav-item mx-md-2">
-          <a class="nav-link" href="#"><span>A</span>bout</a>
+          <a class="nav-link" (click)="navAbout()"><span>A</span>bout</a>
+        </li>
+        <li class="nav-item mx-md-2">
+          <a class="nav-link" (click)="navPhoto()"><span>P</span>hoto</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active mx-md-2">
-          <a class="nav-link btn " href="#"
+          <a class="nav-link btn" href="#"
             >Login <span class="sr-only">(current)</span></a
           >
         </li>
         <li class="nav-item mx-md-2">
-          <a class="nav-link btn " href="#">Sign Up</a>
+          <a class="nav-link btn" href="#">Sign Up</a>
         </li>
       </ul>
     </div>
