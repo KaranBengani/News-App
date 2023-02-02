@@ -5,9 +5,6 @@
   --height: var(--width);
 }
 
-.html {
-  height: 100vh;
-}
 .body {
   /* background-color: var(--dark); */
   /* background-color: #4158d0;

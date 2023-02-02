@@ -97,12 +97,13 @@
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active mx-md-2">
-          <a class="nav-link btn" href="#"
-            >Login <span class="sr-only">(current)</span></a
+          <a *ngIf="isLoggedIn" class="nav-link btn" style="cursor: pointer;"
+            >Login/Sign Up <span class="sr-only">(current)</span></a
           >
         </li>
-        <li class="nav-item mx-md-2">
-          <a class="nav-link btn" href="#">Sign Up</a>
+        <li *ngIf="!isLoggedIn" class="nav-item mx-md-2 d-flex align-items-center" style="cursor: pointer;">
+          <!-- <i class="fa-regular fa-circle-user"></i> -->
+          <img src="../../assets/fa-user-circle.png" style="height:30px;width:30px;">
         </li>
       </ul>
     </div>

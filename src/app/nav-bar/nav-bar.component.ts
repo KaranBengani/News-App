@@ -8,6 +8,7 @@ import { Component , Output,EventEmitter} from '@angular/core';
 export class NavBarComponent {
   @Output() newsEvent = new EventEmitter<boolean>();
   @Output() navLinkEvent = new EventEmitter<string>();
+  isLoggedIn = false;
   navClick(){
     this.newsEvent.emit(true)
   }
@@ -20,4 +21,13 @@ export class NavBarComponent {
   navPhoto(){
     this.navLinkEvent.emit('photo')
   }
+  ngOnInit(blog:any){
+    if(localStorage.getItem("eweekly_user")!=null){
+      
+      this.isLoggedIn = false
+    }
+    else{
+      this.isLoggedIn = true;
+    }
+   }
 }

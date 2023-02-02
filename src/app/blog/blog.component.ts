@@ -12,15 +12,15 @@ export class BlogComponent {
 selectedblog:any="hello";
   news:any;
   ngOnInit(){
-    // this.http.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=5a15f82320c54c608c7370e6a1f5af00&limit=4').subscribe((res) => {
-    //   if(res != null){
-    //     // this.filter(res)
-    //     // console.log(res.articles.author);
-    //     this.filter(res);
-    //   }
-    //   else
-    //     alert("failed")
-    // })
+    this.http.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=5a15f82320c54c608c7370e6a1f5af00&limit=4').subscribe((res) => {
+      if(res != null){
+        // this.filter(res)
+        // console.log(res.articles.author);
+        this.filter(res);
+      }
+      else
+        alert("failed")
+    })
   }
  people:any[] = [
   {

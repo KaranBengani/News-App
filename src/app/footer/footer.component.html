@@ -1,21 +1,22 @@
-    <section class="footer-sec" style="padding-bottom: -30px" >
-      <div class="main">
-        <div class="logo row">
+    <section class="footer-sec">
+      <div class="main row d-flex justify-content-center">
+        <div class="logo col-md-4">
           <div class="footer-header">
-            <img
+            <!-- <img
               src="https://i.postimg.cc/tgk8X2w7/manik-low-resolution-logo-white-on-transparent-background.png"
               class="manik"
               alt=""
-            />
+            /> -->
+            <h3 class="headingColor">
+              <span>T</span>HE <span>E</span>WEEKLY
+            </h3>
           </div>
-          <div class="logo-des">
-            <p>
+          <div class="logo-des pe-5">
+            <p class="pt-md-5">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour.
             </p>
-
-            <a href="#" class="btn-know">Know More</a>
           </div>
         </div>
 
@@ -35,31 +36,31 @@
           </div>
         </div> -->
 
-        <div class="link row">
+        <div class="link col-md-4">
           <div class="footer-header">
             <h3>QUICK LINKS</h3>
           </div>
 
-          <div class="link-des">
+          <div class="link-des pt-md-5">
             <a href="#" class="footer-links">HOME</a>
             <a href="#" class="footer-links">ABOUT</a>
             <a href="#" class="footer-links">GALLERY</a>
-            <a href="#" class="footer-links" (click)="ChangeFunc()">
+            <a class="footer-links" (click)="ChangeFunc()" style="cursor: pointer;">
               LOCATE US
             </a>
-            <a href="#" class="footer-links" (click)="ChangeFunc2()">
+            <a class="footer-links" (click)="ChangeFunc2()" style="cursor: pointer;">
               CONTACT US
             </a>
           </div>
         </div>
 
-        <div class="newsletter row">
+        <div class="newsletter col-md-4">
           <div
             class="contact-form-wrapper d-flex justify-content-center"
             *ngIf="FooterChange"
           >
             <form action="#" class="contact-form">
-              <h5 class="title">Contact us</h5>
+              <h5 class="title">Contact Us</h5>
               <p class="description">
                 Feel free to contact us if you need any assistance, any help or
                 another question.

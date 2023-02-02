@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'News-App';
-  checkView = true
-  componentView = "news"
+  checkView = false //true
+  componentView = "photo" //news
   viewMenu(event:boolean) {
     this.checkView = event
   }

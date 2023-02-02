@@ -28,8 +28,8 @@ section {
     top: 120px;
   }
 
-  .main {
-    /* margin: 50px; */
+  /* .main {
+    margin: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -44,10 +44,10 @@ section {
   }
   .link {
     grid-column: 1/3;
-  }
+  } */
 }
 
-@media (max-width: 660px) {
+/* @media (max-width: 660px) {
   .main {
     gap: 10px;
     margin: 0;
@@ -60,25 +60,33 @@ section {
   .row {
     grid-column: 1/4;
   }
-}
+} */
 
 .manik {
   width: 100px;
 }
 .main {
   margin: 50px;
-  padding-top: 20px;
+  padding-top: 7%;
   padding-bottom: 50px;
-  display: grid;
+  /* display: grid;
   gap: 50px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); */
+}
+span{
+  color:#fca311
 }
 .row {
   margin-top: 50px;
 }
 .footer-header {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.col-md-4{
+  padding: 1%;
+  padding-bottom: 3%;
 }
 
 .office-des {
@@ -92,7 +100,7 @@ section {
   color: #98a8f8;
 }
 .office a:hover {
-  color: #fff;
+  color: #fca311;
 }
 .num {
   font-size: 1rem;
@@ -105,19 +113,19 @@ section {
   gap: 10px;
 }
 .link-des a {
-  color: #fff;
+  color: #fca311;
   text-decoration: none;
   font-size: 1rem;
 }
 
 .link-des a:hover {
-  color: #fb2576;
+  color: #fca311;
   transition: linear 0.3s;
 }
 
 .btn-know {
   text-decoration: none;
-  background-color: #fff;
+  background-color: #fca311;
   padding: 10px;
   position: relative;
   top: 30px;
@@ -129,14 +137,14 @@ section {
 }
 
 .btn-know:hover {
-  color: white;
+  color: #fca311;
   background-color: #98a8f8;
   transition: linear 0.3s;
 }
 
 .contact-form {
   padding: 30px 40px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 12px;
   max-width: 400px;
 }
@@ -175,8 +183,8 @@ section {
 }
 
 .contact-form .form-control:focus {
-  border-color: #f33fb0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #f33fb0;
+  border-color: #fca311;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #fca311;
 }
 
 .contact-form .title {
@@ -198,7 +206,7 @@ section {
 .contact-form .submit-button-wrapper input {
   border: none;
   border-radius: 4px;
-  background-color: #f23292;
+  background-color: #fca311;
   color: white;
   text-transform: uppercase;
   padding: 10px 60px;
@@ -207,5 +215,5 @@ section {
 }
 
 .contact-form .submit-button-wrapper input:hover {
-  background-color: #d30069;
+  background-color: #fca311;
 }
