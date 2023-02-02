@@ -17,8 +17,12 @@
   overflow: scroll;
 }
 
+
 .body {
   margin: var(--gap);
+}
+.body::-webkit-scrollbar{
+  display: none;
 }
 
 .containers > a {

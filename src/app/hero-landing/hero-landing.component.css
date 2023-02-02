@@ -187,3 +187,10 @@ html {
   min-width: auto;
   font-weight: 800;
 }
+
+.bg-text-container::-webkit-scrollbar{
+  display: none;
+}
+.bg-text-container{
+  width: 100%;
+}
