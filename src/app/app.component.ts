@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'News-App';
   checkView = false //true
   componentView = "news" //news
+  admin:boolean = false
   viewMenu(event:boolean) {
     this.checkView = event
   }

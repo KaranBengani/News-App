@@ -31,6 +31,9 @@ export class NavBarComponent {
   navLog(){
     this.navLinkEvent.emit('log')
   }
+  navAdmin(){
+    this.navLinkEvent.emit('admin')
+  }
   ngOnInit(blog:any){
   this.activeClass = false
 

@@ -1,3 +1,4 @@
+<div class="userSide">
 <div class="entryPage" *ngIf="checkView">
   <div class="hero-landing">
     <app-hero-landing></app-hero-landing>
@@ -22,6 +23,9 @@
   <div class="photo" *ngIf="componentView == 'photo'">
     <app-photo-gallery style="width: 90%"></app-photo-gallery>
   </div>
+  <div class="admin" *ngIf="componentView =='admin' ">
+    <app-admin></app-admin>
+  </div>
   <div class="log" *ngIf="componentView == 'log'">
     <app-auth-form></app-auth-form>
   </div>
@@ -29,6 +33,8 @@
     <app-footer></app-footer>
   </div>
 </div>
+</div>
+<router-outlet></router-outlet>
 <!-- <app-photo-gallery></app-photo-gallery> -->
 <!-- <app-about></app-about> -->
 <!-- <app-auth-form></app-auth-form> -->

@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { BlogmodalComponent } from './blogmodal/blogmodal.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { AuthFormComponent } from './auth-form/auth-form.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AuthFormComponent } from './auth-form/auth-form.component';
     NavBarComponent,
     LoginComponent,
     BlogmodalComponent,
-    AuthFormComponent
+    AuthFormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
