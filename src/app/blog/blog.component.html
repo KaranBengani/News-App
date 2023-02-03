@@ -545,7 +545,7 @@
   <!-- <button type="button" class="btn btn-primary">
     Click Me
   </button> -->
-  <div class="modal fade" id="GFG1">
+  <div class="modal fade" id="GFG1" >
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -557,8 +557,9 @@
           ></button>
         </div>
         <div class="modal-body">
-          <app-blogmodal [data]="selectedblog" *ngIf="modal"></app-blogmodal>
-          <app-login *ngIf="!modal"></app-login>
+          <!-- <app-blogmodal [data]="selectedblog" *ngIf="modal"></app-blogmodal> -->
+          <!-- <app-login *ngIf="!modal"></app-login> -->
+          <app-auth-form *ngIf="modal"></app-auth-form>
         </div>
       </div>
     </div>
