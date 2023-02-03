@@ -197,6 +197,30 @@ router.post('/deleteUser',(req,res)=>{
   })
 })
 
+router.post('login',(req,res)=>{
+  client.query(`select * from users where email = '${req.body.email}'`,(err,data)=>{
+    if(!err){
+      if(data.rows[0]!=null){
+        client.query(`select * from users where email = '${req.body.email}' and password ='${req.body.password}';`,(err,data)=>{
+          if(!err){
+            res.send("User deleted successfully");
+          }
+          else{
+            res.send(err)
+          }
+        })
+        // console.log("here");
+      }
+      else{
+        console.log("user doesn't exists")
+      }
+    }
+    else{
+      console.log(err);
+    }
+  })
+})
+
 router.post('/adminMail',(req,res)=>{
   let subject=req.body.subject;
   let bod=req.body.bod;
