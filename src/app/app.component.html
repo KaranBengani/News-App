@@ -1,38 +1,38 @@
 <div class="userSide">
-<div class="entryPage" *ngIf="checkView">
-  <div class="hero-landing">
-    <app-hero-landing></app-hero-landing>
+  <div class="entryPage" *ngIf="checkView">
+    <div class="hero-landing">
+      <app-hero-landing></app-hero-landing>
+    </div>
+    <div class="news-paper">
+      <app-news-paper (navEvent)="viewMenu($event)"></app-news-paper>
+    </div>
   </div>
-  <div class="news-paper">
-    <app-news-paper (navEvent)="viewMenu($event)"></app-news-paper>
+  <div *ngIf="!checkView">
+    <div class="nav-bar sticky-top">
+      <app-nav-bar
+        (newsEvent)="viewMenu($event)"
+        (navLinkEvent)="navChange($event)"
+      ></app-nav-bar>
+    </div>
+    <div class="blog" *ngIf="componentView == 'news'">
+      <app-blog></app-blog>
+    </div>
+    <div class="about" *ngIf="componentView == 'about'">
+      <app-about></app-about>
+    </div>
+    <div class="photo" *ngIf="componentView == 'photo'">
+      <app-photo-gallery style="width: 90%"></app-photo-gallery>
+    </div>
+    <div class="admin" *ngIf="componentView == 'admin'">
+      <app-admin></app-admin>
+    </div>
+    <div class="log" *ngIf="componentView == 'log'">
+      <app-auth-form></app-auth-form>
+    </div>
+    <div class="footer">
+      <app-footer></app-footer>
+    </div>
   </div>
-</div>
-<div *ngIf="!checkView">
-  <div class="nav-bar sticky-top">
-    <app-nav-bar
-      (newsEvent)="viewMenu($event)"
-      (navLinkEvent)="navChange($event)"
-    ></app-nav-bar>
-  </div>
-  <div class="blog" *ngIf="componentView == 'news'">
-    <app-blog></app-blog>
-  </div>
-  <div class="about" *ngIf="componentView == 'about'">
-    <app-about></app-about>
-  </div>
-  <div class="photo" *ngIf="componentView == 'photo'">
-    <app-photo-gallery style="width: 90%"></app-photo-gallery>
-  </div>
-  <div class="admin" *ngIf="componentView =='admin' ">
-    <app-admin></app-admin>
-  </div>
-  <div class="log" *ngIf="componentView == 'log'">
-    <app-auth-form></app-auth-form>
-  </div>
-  <div class="footer">
-    <app-footer></app-footer>
-  </div>
-</div>
 </div>
 <router-outlet></router-outlet>
 <!-- <app-photo-gallery></app-photo-gallery> -->
