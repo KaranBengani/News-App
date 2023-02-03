@@ -10,11 +10,11 @@
 
         <div class="row">
 
-            <div class="col-md-4">
-                <mat-card class="example-card" >
+            <div class="col-md-4" *ngFor=" let user of users">
+                <mat-card class="example-card"  style="border: solid; border-color: #fca311;">
                     <mat-card-header style="display: flex; justify-content: space-between;">
                       <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>NAME</mat-card-title>
+                      <mat-card-title>{{user.name}}</mat-card-title>
                       <div class="div" >
                         <img src="../assets/UserAvatar.svg" alt=""  >
                       </div>
@@ -22,162 +22,28 @@
                     </mat-card-header>
                     <mat-card-content>
                       
-                      <p> USER CONTACT NUMBER</p> <br>
-                      <P>USER EMAIL</P>
+                      <p> {{user.phone}} <br>
+                      <P>{{user.email}}</P>
+                      
                       
                       <mat-divider></mat-divider>
                     </mat-card-content>
                     <mat-card-actions>
-                      <button class="btn btn-danger"  >DELETE</button>
+                      <button class="btn btn-danger" (click)="delete(user.email)" >DELETE</button>
                       
                     </mat-card-actions>
                     <mat-card-footer>
                      
                     </mat-card-footer>
                   </mat-card>
+                  <br>
+                  <br>
                   
             </div>
-            <div class="col-md-4">
-                <mat-card class="example-card" >
-                    <mat-card-header style="display: flex; justify-content: space-between;">
-                      <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>NAME</mat-card-title>
-                      <div class="div" >
-                        <img src="../assets/UserAvatar.svg" alt=""  >
-                      </div>
-                      
-                    </mat-card-header>
-                    <mat-card-content>
-                      
-                      <p> USER CONTACT NUMBER</p> <br>
-                      <P>USER EMAIL</P>
-                      
-                      <mat-divider></mat-divider>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button class="btn btn-danger"  >DELETE</button>
-                      
-                    </mat-card-actions>
-                    <mat-card-footer>
-                     
-                    </mat-card-footer>
-                  </mat-card>
-                  
-            </div>
-            <div class="col-md-4">
-                <mat-card class="example-card" >
-                    <mat-card-header style="display: flex; justify-content: space-between;">
-                      <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>NAME</mat-card-title>
-                      <div class="div" >
-                        <img src="../assets/UserAvatar.svg" alt=""  >
-                      </div>
-                      
-                    </mat-card-header>
-                    <mat-card-content>
-                      
-                      <p> USER CONTACT NUMBER</p> <br>
-                      <P>USER EMAIL</P>
-                      
-                      <mat-divider></mat-divider>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button class="btn btn-danger"  >DELETE</button>
-                      
-                    </mat-card-actions>
-                    <mat-card-footer>
-                     
-                    </mat-card-footer>
-                  </mat-card>
-                  
-            </div>
+            
 
         </div>
-        <div class="row" style="padding-top: 30px;">
-
-            <div class="col-md-4">
-                <mat-card class="example-card" >
-                    <mat-card-header style="display: flex; justify-content: space-between;">
-                      <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>NAME</mat-card-title>
-                      <div class="div" >
-                        <img src="../assets/UserAvatar.svg" alt=""  >
-                      </div>
-                      
-                    </mat-card-header>
-                    <mat-card-content>
-                      
-                      <p> USER CONTACT NUMBER</p> <br>
-                      <P>USER EMAIL</P>
-                      
-                      <mat-divider></mat-divider>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button class="btn btn-danger"  >DELETE</button>
-                      
-                    </mat-card-actions>
-                    <mat-card-footer>
-                     
-                    </mat-card-footer>
-                  </mat-card>
-                  
-            </div>
-            <div class="col-md-4">
-                <mat-card class="example-card" >
-                    <mat-card-header style="display: flex; justify-content: space-between;">
-                      <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>NAME</mat-card-title>
-                      <div class="div" >
-                        <img src="../assets/UserAvatar.svg" alt=""  >
-                      </div>
-                      
-                    </mat-card-header>
-                    <mat-card-content>
-                      
-                      <p> USER CONTACT NUMBER</p> <br>
-                      <P>USER EMAIL</P>
-                      
-                      <mat-divider></mat-divider>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button class="btn btn-danger" >DELETE</button>
-                      
-                    </mat-card-actions>
-                    <mat-card-footer>
-                     
-                    </mat-card-footer>
-                  </mat-card>
-                  
-            </div>
-            <div class="col-md-4">
-                <mat-card class="example-card" >
-                    <mat-card-header style="display: flex; justify-content: space-between;">
-                      <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>NAME</mat-card-title>
-                      <div class="div" >
-                        <img src="../assets/UserAvatar.svg" alt=""  >
-                      </div>
-                      
-                    </mat-card-header>
-                    <mat-card-content>
-                      
-                      <p> USER CONTACT NUMBER</p> <br>
-                      <P>USER EMAIL</P>
-                      
-                      <mat-divider></mat-divider>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button class="btn btn-danger"  >DELETE</button>
-                      
-                    </mat-card-actions>
-                    <mat-card-footer>
-                     
-                    </mat-card-footer>
-                  </mat-card>
-                  
-            </div>
-
-        </div>
+        
         
 
     </div>
