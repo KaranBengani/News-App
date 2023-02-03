@@ -66,9 +66,12 @@ section {
   width: 100px;
 }
 .main {
-  margin: 50px;
-  padding-top: 7%;
-  padding-bottom: 50px;
+  margin-top: 50px;
+  
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 3%;
+  
   /* display: grid;
   gap: 50px;
   grid-template-columns: repeat(4, 1fr); */
@@ -86,7 +89,7 @@ span{
 
 .col-md-4{
   padding: 1%;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
 }
 
 .office-des {
