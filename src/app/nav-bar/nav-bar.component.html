@@ -69,7 +69,7 @@
           <a class="nav-link" href="#"><span>C</span>ategory</a>
         </li> -->
         <li class="nav-item mx-md-2">
-          <a class="nav-link" (click)="navNews()"><span>N</span>ews</a>
+          <a class="nav-link" (click)="navNews('general')"><span>N</span>ews</a>
         </li>
         <li class="nav-item dropdown mx-md-2">
           <a
@@ -82,12 +82,12 @@
             <span>C</span>ategory
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" class="nav-link" (click)="navNews()" href="#">Sports</a></li>
-            <li><a class="dropdown-item" class="nav-link" (click)="navNews()" href="#">Business</a></li>
-            <li><a class="dropdown-item" class="nav-link" (click)="navNews()" href="#">Health</a></li>
-            <li><a class="dropdown-item" class="nav-link" (click)="navNews()" href="#">Entertainment</a></li>
-            <li><a class="dropdown-item" class="nav-link" (click)="navNews()" href="#">Technology</a></li>
-            <li><a class="dropdown-item" class="nav-link" (click)="navNews()" href="#">Science</a></li>
+            <li><a class="dropdown-item" class="nav-link" (click)="navNews('sports')" href="#">Sports</a></li>
+            <li><a class="dropdown-item" class="nav-link" (click)="navNews('business')" href="#">Business</a></li>
+            <li><a class="dropdown-item" class="nav-link" (click)="navNews('health')" href="#">Health</a></li>
+            <li><a class="dropdown-item" class="nav-link" (click)="navNews('entertainment')" href="#">Entertainment</a></li>
+            <li><a class="dropdown-item" class="nav-link" (click)="navNews('technology')" href="#">Technology</a></li>
+            <li><a class="dropdown-item" class="nav-link" (click)="navNews('science')" href="#">Science</a></li>
           </ul>
         </li>
         <li class="nav-item mx-md-2">

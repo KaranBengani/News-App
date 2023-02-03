@@ -1,4 +1,5 @@
 import { Component , Output,EventEmitter} from '@angular/core';
+import { StoreService } from '../store.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,12 +9,17 @@ import { Component , Output,EventEmitter} from '@angular/core';
 export class NavBarComponent {
   @Output() newsEvent = new EventEmitter<boolean>();
   @Output() navLinkEvent = new EventEmitter<string>();
+
   activeClass : boolean = false;
   isLoggedIn = false;
+
+  constructor(public store: StoreService){}
+
   navClick(){
     this.newsEvent.emit(true)
   }
-  navNews(){
+  navNews(cat:string){
+    this.store.category = cat;
     this.navLinkEvent.emit('news')
   }
   navAbout(){
