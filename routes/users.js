@@ -132,7 +132,7 @@ router.post('/newUser',(req,res)=>{
         var token = jwt.sign({ data: req.body.email }, "D23s2vsj6BRyFUKomxWW", {
           expiresIn: 15552000, // in seconds
         });
-        client.query(`insert into users values('${req.body.name}','${req.body.password}','${req.body.email}','${req.body.phone}','${req.body.preferences}');`,(err,data)=>{
+        client.query(`insert into users values('${req.body.name}','${req.body.password}','${req.body.email}','${req.body.phone}','${req.body.preferences}','${req.body.status}');`,(err,data)=>{
           if(!err){
             // res.send("User created successfully");
             fs.readFile(
@@ -198,18 +198,21 @@ router.post('/deleteUser',(req,res)=>{
 })
 
 router.post('login',(req,res)=>{
-  client.query(`select * from users where email = '${req.body.email}'`,(err,data)=>{
+  client.query(`select * from users where email = '${req.body.email}'`,async (err,data)=>{
     if(!err){
       if(data.rows[0]!=null){
-        client.query(`select * from users where email = '${req.body.email}' and password ='${req.body.password}';`,(err,data)=>{
-          if(!err){
-            res.send("User deleted successfully");
-          }
-          else{
-            res.send(err)
-          }
-        })
-        // console.log("here");
+        let isCorrect = await bcrypt.compare(body.password, isExistEMail.pass);
+        if (isCorrect) {
+          var token = jwt.sign({ data: isExistEMail.mail }, config.secret, {
+            expiresIn: config.sessionExpire, // in seconds
+          });
+          console.log("on local");
+          return res.status(200).json({
+            status: 200,
+            success: true,
+            data: data.rows[0],
+            message: "Login in successfully",
+          });
       }
       else{
         console.log("user doesn't exists")
@@ -218,7 +221,7 @@ router.post('login',(req,res)=>{
     else{
       console.log(err);
     }
-  })
+  }})
 })
 
 router.post('/adminMail',(req,res)=>{
