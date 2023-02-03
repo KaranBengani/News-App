@@ -29,3 +29,7 @@ p {
 .span {
   color: #fca311;
 }
+
+.navbar li {
+  cursor: pointer;
+}

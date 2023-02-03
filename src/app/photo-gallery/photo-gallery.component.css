@@ -14,11 +14,10 @@
   overflow: scroll;
 }
 
-
 .body {
   margin: var(--gap);
 }
-.body::-webkit-scrollbar{
+.body::-webkit-scrollbar {
   display: none;
 }
 
@@ -36,7 +35,9 @@
 .containers > a > img {
   border: solid 2px #fca311;
 }
-
+/* .imgC {
+  border: solid 2px #fca311;
+} */
 .containers > a::after {
   content: "";
   background: linear-gradient(transparent, black);
