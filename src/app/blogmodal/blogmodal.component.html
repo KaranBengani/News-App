@@ -7,7 +7,7 @@
         [ngStyle]="{ 'background-image': 'url(' + data.urlToImage + ')' }"
       >
         <div class="poster-title">
-          <h1>{{ data.title }}</h1>
+          <h1>{{ data.title | slice: 0 : 35}}</h1>
           <div class="line"></div>
           <p *ngIf="data.author">{{ data.author }}</p>
           <p *ngIf="!data.author">Anonymous</p>

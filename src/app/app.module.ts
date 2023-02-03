@@ -17,6 +17,11 @@ import { BlogmodalComponent } from './blogmodal/blogmodal.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { AuthFormComponent } from './auth-form/auth-form.component';
 import { AdminComponent } from './admin/admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { AdminComponent } from './admin/admin.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

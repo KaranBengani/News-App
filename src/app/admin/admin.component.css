@@ -1,0 +1,11 @@
+.headingColor {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .headingColor span {
+    color: #fca311;
+  }
+
+  h1{
+    padding-bottom: 30px;
+  }
