@@ -251,11 +251,19 @@
         width: 1rem;
         border-radius: 50%;
         box-shadow: inset 0 0 3px #bb86fc;
-        background-color: transparent;
-
+        // background-color: transparent;
+        // background-color: green;
         position: absolute;
         right: 0;
       }
+    }
+
+    .selected-card{
+      // background-color: green;
+      color:green
+    }
+    .not-selected-card{
+      background-color: transparent;
     }
 
     .description {

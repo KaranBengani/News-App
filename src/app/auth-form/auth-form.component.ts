@@ -45,13 +45,14 @@ login(){
     console.log(res);
     this.loginemail="";
     this.loginpassword="";
-    alert("form submitted");
     this.setLocalStorage(res);
+    alert("form submitted");
     window.location.reload();
   })
 }
 setLocalStorage(res:any){
-  localStorage.setItem("eweekly_user",res.email);
+  localStorage.setItem("eweekly_user",res.data.email);
+  console.log(res.data.email);
 }
 toggleForm(){
 this.activeClass= !this.activeClass

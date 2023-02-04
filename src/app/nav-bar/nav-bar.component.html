@@ -135,7 +135,7 @@
         <li class="nav-item mx-md-2">
           <a class="nav-link" (click)="navPhoto()"><span>P</span>hoto</a>
         </li>
-        <li class="nav-item mx-md-2">
+        <li *ngIf="admin" class="nav-item mx-md-2">
           <a class="nav-link" (click)="navAdmin()"><span>A</span>dmin</a>
         </li>
       </ul>

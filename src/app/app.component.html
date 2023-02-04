@@ -33,9 +33,11 @@
       <app-footer></app-footer>
     </div>
   </div> -->
-  <app-nav-bar></app-nav-bar>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <div *ngIf="!checkView">
+    <app-nav-bar></app-nav-bar>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
 </div>
 <!-- <router-outlet></router-outlet> -->
 <!-- <app-photo-gallery></app-photo-gallery> -->

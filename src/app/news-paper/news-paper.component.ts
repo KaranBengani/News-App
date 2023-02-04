@@ -1,4 +1,5 @@
 import { Component,Output,EventEmitter } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-news-paper',
@@ -10,8 +11,12 @@ export class NewsPaperComponent {
   showUp(): void {
     window.scroll(0,0);
   }
+  constructor(private router: Router){
+
+  }
   navClick(){
-    this.navEvent.emit(false)
+    this.navEvent.emit(false);
+    this.router.navigate(['blog'])
     this.showUp()
   }
 }

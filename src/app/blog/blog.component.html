@@ -340,7 +340,7 @@
       <div class="containers">
         <div class="cards1">
           <div class="cards card-one card-sports" (click)="check('sports')">
-            <h2 class="card-title">Sports</h2>
+            <h2 class="card-title" [ngClass]="{'selected-card':selected[0],'not-selected-card':!selected[0]}">Sports</h2>
 
             <p class="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
@@ -348,7 +348,7 @@
             </p>
           </div>
           <div class="cards card-one" (click)="check('business')">
-            <h2 class="card-title">Business</h2>
+            <h2 class="card-title" [ngClass]="{'selected-card':selected[1],'not-selected-card':!selected[1]}">Business</h2>
 
             <p class="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
@@ -356,7 +356,7 @@
             </p>
           </div>
           <div class="cards card-two" (click)="check('health')">
-            <h2 class="card-title">Health</h2>
+            <h2 class="card-title" [ngClass]="{'selected-card':selected[2],'not-selected-card':!selected[2]}">Health</h2>
 
             <p class="description">
               If you read carefully, you'll find that this is not your typical
@@ -365,7 +365,7 @@
           </div>
 
           <div class="cards card-three" (click)="check('entertainment')">
-            <h2 class="card-title">Entertainment</h2>
+            <h2 class="card-title" [ngClass]="{'selected-card':selected[3],'not-selected-card':!selected[3]}">Entertainment</h2>
 
             <p class="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
@@ -374,7 +374,7 @@
           </div>
 
           <div class="cards card-four" (click)="check('technology')">
-            <h2 class="card-title">Technology</h2>
+            <h2 class="card-title"  [ngClass]="{'selected-card':selected[4],'not-selected-card':!selected[4]}">Technology</h2>
 
             <p class="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
@@ -382,7 +382,7 @@
             </p>
           </div>
           <div class="cards card-one" (click)="check('science')">
-            <h2 class="card-title">Science</h2>
+            <h2 class="card-title" [ngClass]="{'selected-card':selected[5],'not-selected-card':!selected[5]}">Science</h2>
             <p class="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
               alias ut veniam?
@@ -401,7 +401,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="cards">
   <div class="container-fluid row">
     <div
       class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12"
@@ -448,7 +448,6 @@
               </p>
             </div>
           </figcaption>
-          <a href="#"></a>
         </figure>
       </div>
       <div
@@ -488,13 +487,10 @@
             </svg>
             <div class="body">
               <p>
-                Enamel pin selvage health goth edison bulb, venmo glossier
-                tattooed hella butcher cred iPhone. Plaid skateboard man braid
-                wayfarers.
+                {{ blog.title }}
               </p>
             </div>
           </figcaption>
-          <a href="#"></a>
         </figure>
       </div>
     </div>
@@ -557,9 +553,9 @@
           ></button>
         </div>
         <div class="modal-body">
-          <app-blogmodal [data]="selectedblog" *ngIf="modal"></app-blogmodal>
+          <app-blogmodal [data]="selectedblog" *ngIf="!modal"></app-blogmodal>
           <!-- <app-login *ngIf="!modal"></app-login> -->
-          <!-- <app-auth-form *ngIf="modal"></app-auth-form> -->
+          <app-auth-form *ngIf="modal"></app-auth-form>
         </div>
       </div>
     </div>

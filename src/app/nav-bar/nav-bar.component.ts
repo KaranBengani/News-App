@@ -13,6 +13,7 @@ export class NavBarComponent {
 
   activeClass : boolean = false;
   isLoggedIn = false;
+  admin = false;
 
   constructor(public store: StoreService,private router: Router){}
 
@@ -43,10 +44,16 @@ export class NavBarComponent {
   }
   ngOnInit(blog:any){
   this.activeClass = false
-
+    console.log(localStorage.getItem("eweekly_user"));
     if(localStorage.getItem("eweekly_user")!=null){
       
       this.isLoggedIn = true
+      this.admin = false;
+    }
+    if(localStorage.getItem("eweekly_user")==="admin@admin.com"){
+      
+      this.isLoggedIn = true
+      this.admin = true;
     }
     else{
       this.isLoggedIn = false;
@@ -59,7 +66,10 @@ export class NavBarComponent {
 
   logout(){
     localStorage.removeItem("eweekly_user");
-    this.isLoggedIn = false
+    this.isLoggedIn = false;
+    this.admin=false;
+    this.navLinkEvent.emit('news')
+    this.router.navigate(['blog'])
     alert("You just logged out");
   }
 }
