@@ -164,7 +164,13 @@ router.post('/newUser',(req,res)=>{
         // console.log("here");
       }
       else{
-        console.log("user already exists")
+        // console.log()
+        return res.status(200).json({
+          status: 300,
+          success: true,
+          data: data.rows[0],
+          message: "user already exists",
+        });
       }
     }
     else{
@@ -179,7 +185,7 @@ router.post('/deleteUser',(req,res)=>{
       if(data.rows[0]!=null){
         client.query(`delete from users where email = '${req.body.email}';`,(err,data)=>{
           if(!err){
-            res.send("User deleted successfully");
+            res.json("User deleted successfully");
           }
           else{
             res.send(err)
