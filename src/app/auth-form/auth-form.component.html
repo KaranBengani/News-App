@@ -16,9 +16,9 @@
       <div class="formbox">
         <div class="form">
           <h2>Signin</h2>
-          <input type="text" placeholder="username" />
-          <input type="password" placeholder="Password" />
-          <input type="submit" value="Login" />
+          <input type="text" [(ngModel)]="loginemail" placeholder="email" />
+          <input type="password" [(ngModel)]="loginpassword" placeholder="Password" />
+          <input type="submit" (click)="login()" value="Login" />
           <p class="signup-text">
             Don't have an account?
             <a (click)="toggleForm()">Signup</a>
@@ -33,11 +33,11 @@
       <div class="formbox">
         <div class="form">
           <h2>Signup</h2>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="number" placeholder="Contact" />
-          <input type="password" placeholder="Password" />
-          <input type="submit" value="Signup" />
+          <input type="text" [(ngModel)]="name" placeholder="Name" />
+          <input type="email" [(ngModel)]="email" placeholder="Email" />
+          <input type="number" [(ngModel)]="contact" placeholder="Contact" />
+          <input type="password" [(ngModel)]="password" placeholder="Password" />
+          <input type="submit" (click)="signup()" value="Signup" />
           <p class="signup-text">
             Already have an account?
             <a (click)="toggleForm()">Login</a>
