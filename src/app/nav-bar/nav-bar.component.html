@@ -135,14 +135,14 @@
         <li class="nav-item mx-md-2">
           <a class="nav-link" (click)="navPhoto()"><span>P</span>hoto</a>
         </li>
-        <!-- <li class="nav-item mx-md-2">
+        <li class="nav-item mx-md-2">
           <a class="nav-link" (click)="navAdmin()"><span>A</span>dmin</a>
-        </li> -->
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active mx-md-2">
           <a
-            *ngIf="isLoggedIn"
+            *ngIf="!isLoggedIn"
             (click)="navLog()"
             class="nav-link btn"
             style="cursor: pointer"
@@ -153,7 +153,7 @@
           </a>
         </li>
         <li
-          *ngIf="!isLoggedIn"
+          *ngIf="isLoggedIn"
           class="nav-item mx-md-2 d-flex align-items-center"
           style="cursor: pointer"
         >
@@ -161,7 +161,9 @@
             src="../../assets/fa-user-circle.png"
             style="height: 30px; width: 30px"
           />
+          <span class="ms-2" style="color:red" (click)="logout()">Logout</span>
         </li>
+        
       </ul>
     </div>
   </div>

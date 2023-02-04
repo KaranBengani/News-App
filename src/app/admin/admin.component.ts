@@ -25,10 +25,10 @@ export class AdminComponent {
   }
 
   delete(email: string){
-    let body = {email:email};
+    let body = {"email":email};
     this.http.post('http://localhost:3000/users/deleteUser',body).subscribe((res)=>{
       // this.users = res;
-      console.log(res);
+      // console.log(res);
       this.callFunc()
     })
   }

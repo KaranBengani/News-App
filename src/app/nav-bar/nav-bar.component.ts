@@ -39,20 +39,27 @@ export class NavBarComponent {
   }
   navAdmin(){
     this.navLinkEvent.emit('admin')
+    this.router.navigate(['admin'])
   }
   ngOnInit(blog:any){
   this.activeClass = false
 
     if(localStorage.getItem("eweekly_user")!=null){
       
-      this.isLoggedIn = false
+      this.isLoggedIn = true
     }
     else{
-      this.isLoggedIn = true;
+      this.isLoggedIn = false;
     }
    }
    
   toggleForm(){
     this.activeClass= !this.activeClass
+  }
+
+  logout(){
+    localStorage.removeItem("eweekly_user");
+    this.isLoggedIn = false
+    alert("You just logged out");
   }
 }

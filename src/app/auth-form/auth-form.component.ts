@@ -28,9 +28,13 @@ signup(){
   }
   this.http.post("http://localhost:3000/users/newUser",body).subscribe(res=>{
     console.log(res);
+    this.name="";
+    this.email="";
+    this.contact="";
+    this.password="";
     alert("form submitted")
+    this.activeClass = false;
   })
-  this.activeClass = false;
 }
 login(){
   let body = {
@@ -39,8 +43,15 @@ login(){
   }
   this.http.post("http://localhost:3000/users/login",body).subscribe(res=>{
     console.log(res);
-    alert("form submitted")
+    this.loginemail="";
+    this.loginpassword="";
+    alert("form submitted");
+    this.setLocalStorage(res);
+    window.location.reload();
   })
+}
+setLocalStorage(res:any){
+  localStorage.setItem("eweekly_user",res.email);
 }
 toggleForm(){
 this.activeClass= !this.activeClass
