@@ -197,16 +197,17 @@ router.post('/deleteUser',(req,res)=>{
   })
 })
 
-router.post('login',(req,res)=>{
+router.post('/login',(req,res)=>{
   client.query(`select * from users where email = '${req.body.email}'`,async (err,data)=>{
     if(!err){
       if(data.rows[0]!=null){
-        let isCorrect = await bcrypt.compare(body.password, isExistEMail.pass);
+        let isExistEmail = data.rows[0];
+        let isCorrect = await bcrypt.compare(req.body.password, isExistEmail.password);
         if (isCorrect) {
-          var token = jwt.sign({ data: isExistEMail.mail }, config.secret, {
-            expiresIn: config.sessionExpire, // in seconds
-          });
-          console.log("on local");
+          // var token = jwt.sign({ data: isExistEmail.mail }, config.secret, {
+          //   expiresIn: config.sessionExpire, // in seconds
+          // });
+          // console.log("on local");
           return res.status(200).json({
             status: 200,
             success: true,
@@ -215,11 +216,22 @@ router.post('login',(req,res)=>{
           });
       }
       else{
-        console.log("user doesn't exists")
+        return res.status(200).json({
+          status: 300,
+          success: true,
+          data: data.rows[0],
+          message: "Username or password is wrong",
+        });
       }
     }
     else{
-      console.log(err);
+      return res.status(200).json({
+        status: 300,
+        success: true,
+        data: data.rows[0],
+        message: "User doesn't exists",
+      });
+      console.log("user doesn't exists");
     }
   }})
 })
