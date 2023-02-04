@@ -50,12 +50,12 @@ export class NavBarComponent {
       this.isLoggedIn = true
       this.admin = false;
     }
-    if(localStorage.getItem("eweekly_user")==="admin@admin.com"){
+    if(localStorage.getItem("eweekly_user")=="admin@admin.com"){
       
       this.isLoggedIn = true
       this.admin = true;
     }
-    else{
+    if(localStorage.getItem("eweekly_user")==null){
       this.isLoggedIn = false;
     }
    }
