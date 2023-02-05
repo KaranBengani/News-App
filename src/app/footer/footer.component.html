@@ -74,7 +74,7 @@
               class="form-control rounded border-white mb-3 form-input"
               id="name"
               placeholder="Subject"
-              required
+              
               formControlName="subject"
             />
             <div *ngIf="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].dirty || contactForm.controls['subject'].touched)"
@@ -97,7 +97,7 @@
               rows="5"
               cols="30"
               placeholder="Message"
-              required
+              
               formControlName="desc"
             ></textarea>
             <div *ngIf="contactForm.controls['desc'].invalid && (contactForm.controls['desc'].dirty || contactForm.controls['desc'].touched)"
