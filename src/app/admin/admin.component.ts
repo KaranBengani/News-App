@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AdminComponent {
   users: any;
   deleteUser: boolean = true;
+  searchText:string="";
   signin = false;
   constructor(private http: HttpClient){
 

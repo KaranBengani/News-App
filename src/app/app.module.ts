@@ -26,6 +26,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EntryComponent } from './entry/entry.component';
 import { MainComponent } from './main/main.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MainComponent } from './main/main.component';
     AuthFormComponent,
     AdminComponent,
     EntryComponent,
-    MainComponent
+    MainComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

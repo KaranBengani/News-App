@@ -3,9 +3,13 @@
     <h1 class="headingColor text-center mb-5">
       <span>E</span>weekly <span>U</span>sers
     </h1>
-
+    <div class="d-flex justify-content-between">
+      <div></div>
+      <input type="text" placeholder="Search Here" [(ngModel)]="searchText" class="mr-sm-2">
+    </div>
+    
     <div class="row">
-      <div class="col-md-4" *ngFor="let user of users" id="mat-card-div">
+      <div class="col-md-4" *ngFor="let user of users | search: searchText" id="mat-card-div">
         <mat-card class="example-card" style="padding: 10px">
           <mat-card-header>
             <mat-card-subtitle>USER</mat-card-subtitle>
