@@ -78,8 +78,10 @@
               formControlName="subject"
             />
             <div *ngIf="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].dirty || contactForm.controls['subject'].touched)"
-              class="alert alert-danger">
-                  Message is required.
+              class="alert alert-danger  mb-2" 
+              style="text-align: center;"
+              >
+                  Subject is Required.
           </div>
           </div>
           <!-- <div>
@@ -101,7 +103,8 @@
               formControlName="desc"
             ></textarea>
             <div *ngIf="contactForm.controls['desc'].invalid && (contactForm.controls['desc'].dirty || contactForm.controls['desc'].touched)"
-              class="alert alert-danger">
+              class="alert alert-danger  mb-2"
+              style="text-align: center;">
                   Message is required.
           </div>
           </div>
