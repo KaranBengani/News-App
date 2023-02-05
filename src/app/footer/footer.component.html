@@ -2,12 +2,7 @@
   <div class="main row d-flex justify-content-center">
     <div class="logo col-md-4">
       <div class="footer-header">
-        <!-- <img
-              src="https://i.postimg.cc/tgk8X2w7/manik-low-resolution-logo-white-on-transparent-background.png"
-              class="manik"
-              alt=""
-            /> -->
-        <h3 class="headingColor"><span>T</span>HE <span>E</span>WEEKLY</h3>
+        <h2 class="headingColor"><span>T</span>HE <span>E</span>WEEKLY</h2>
       </div>
       <div class="logo-des pe-5">
         <p class="pt-md-5">
@@ -18,31 +13,15 @@
       </div>
     </div>
 
-    <!-- <div class="office row">
-          <div class="footer-header">
-            <h3>Office</h3>
-          </div>
-          <div class="office-des">
-            <p>
-              here are <br />
-              many variations of passages<br />of Lorem Ipsum<br />available
-            </p>
-
-            <a href="#">manikmaity.haker2003@gmail.com</a>
-
-            <p class="num">+91-9999999999</p>
-          </div>
-        </div> -->
-
     <div class="link col-md-3">
       <div class="footer-header">
-        <h3>QUICK LINKS</h3>
+        <h2>QUICK LINKS</h2>
       </div>
 
       <div class="link-des pt-md-5">
         <a href="#" class="footer-links">HOME</a>
-        <a href="#" class="footer-links">ABOUT</a>
-        <a href="#" class="footer-links">GALLERY</a>
+        <a class="footer-links">ABOUT</a>
+        <a class="footer-links">GALLERY</a>
         <a class="footer-links" (click)="ChangeFunc()" style="cursor: pointer">
           LOCATE US
         </a>
@@ -74,24 +53,21 @@
               class="form-control rounded border-white mb-3 form-input"
               id="name"
               placeholder="Subject"
-              
               formControlName="subject"
             />
-            <div *ngIf="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].dirty || contactForm.controls['subject'].touched)"
-              class="alert alert-danger  mb-2" 
-              style="text-align: center;"
-              >
-                  Subject is Required.
+            <div
+              *ngIf="
+                contactForm.controls['subject'].invalid &&
+                (contactForm.controls['subject'].dirty ||
+                  contactForm.controls['subject'].touched)
+              "
+              class="alert alert-danger mb-2"
+              style="text-align: center"
+            >
+              Subject is Required.
+            </div>
           </div>
-          </div>
-          <!-- <div>
-                <input
-                  type="email"
-                  class="form-control rounded border-white mb-3 form-input"
-                  placeholder="Email"
-                  required
-                />
-              </div> -->
+
           <div>
             <textarea
               id="message"
@@ -99,17 +75,26 @@
               rows="5"
               cols="30"
               placeholder="Message"
-              
               formControlName="desc"
             ></textarea>
-            <div *ngIf="contactForm.controls['desc'].invalid && (contactForm.controls['desc'].dirty || contactForm.controls['desc'].touched)"
-              class="alert alert-danger  mb-2"
-              style="text-align: center;">
-                  Message is required.
-          </div>
+            <div
+              *ngIf="
+                contactForm.controls['desc'].invalid &&
+                (contactForm.controls['desc'].dirty ||
+                  contactForm.controls['desc'].touched)
+              "
+              class="alert alert-danger mb-2"
+              style="text-align: center"
+            >
+              Message is required.
+            </div>
           </div>
           <div class="submit-button-wrapper">
-            <input type="submit" [disabled]="contactForm.pristine || contactForm.invalid" (click)="contactSubmit()"/>
+            <input
+              type="submit"
+              [disabled]="contactForm.pristine || contactForm.invalid"
+              (click)="contactSubmit()"
+            />
           </div>
         </form>
       </div>

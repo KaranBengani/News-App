@@ -7,7 +7,7 @@ import { Router} from '@angular/router';
   styleUrls: ['./news-paper.component.scss']
 })
 export class NewsPaperComponent {
-  @Output() navEvent = new EventEmitter<boolean>();
+  
   showUp(): void {
     window.scroll(0,0);
   }
@@ -15,7 +15,7 @@ export class NewsPaperComponent {
 
   }
   navClick(){
-    this.navEvent.emit(false);
+    
     this.router.navigate(['main'])
     this.showUp()
   }

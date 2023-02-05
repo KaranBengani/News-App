@@ -1,194 +1,3 @@
-// @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
-// :root {
-//   --background-dark: #d6308b;
-//   --text-light: rgba(223, 232, 229, 0.853);
-//   --text-lighter: rgba(255, 255, 255, 0.9);
-//   --spacing-s: 8px;
-//   --spacing-m: 16px;
-//   --spacing-l: 24px;
-//   --spacing-xl: 32px;
-//   --spacing-xxl: 64px;
-//   --width-container: 1200px;
-// }
-// * {
-//   box-sizing: border-box;
-//   font-weight: normal;
-// }
-
-// * {
-//   border: 0;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
-// html {
-//   height: 100%;
-//   font-family: "Roboto Mono", "sans-serif";
-//   font-size: 14px;
-// }
-
-// body {
-//   height: 100%;
-// }
-// .blog {
-//   background-image: linear-gradient(15deg, #333 0%, azure 150%);
-// }
-
-// .hero-section {
-//   align-items: flex-start;
-//   display: flex;
-//   min-height: 100%;
-//   justify-content: center;
-//   padding: var(--spacing-xxl) var(--spacing-l);
-//   border-radius: 1.5rem;
-// }
-
-// .card-grid {
-//   display: grid;
-//   grid-template-columns: repeat(1, 1fr);
-//   grid-column-gap: var(--spacing-l);
-//   grid-row-gap: var(--spacing-l);
-//   max-width: var(--width-container);
-//   width: 100%;
-// }
-
-// @media (min-width: 540px) {
-//   .card-grid {
-//     grid-template-columns: repeat(1, 1fr);
-//   }
-// }
-
-// @media (min-width: 960px) {
-//   .card-grid {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-// }
-
-// .card {
-//   list-style: none;
-//   position: relative;
-//   border-radius: 0.5rem;
-// }
-
-// .card:before {
-//   content: "";
-//   display: block;
-//   padding-bottom: 150%;
-//   width: 100%;
-//   border-radius: 1.5rem;
-// }
-
-// .card__background {
-//   background-size: cover;
-//   background-position: center;
-//   border-radius: var(--spacing-l);
-//   bottom: 0;
-//   filter: brightness(0.75) saturate(1.2) contrast(0.85);
-//   left: 0;
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   transform-origin: center;
-//   transform: scale(1) translateZ(0);
-//   transition: filter 200ms linear, transform 200ms linear;
-// }
-
-// .card:hover .card__background{
-//   transform: scale(1.05) translateZ(0);
-//   border-radius: 1.5rem;
-// }
-
-// .card-grid:hover > .card:not(:hover) .card__background{
-//   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-//   border-radius: 0.5rem;
-// }
-
-// .card__content {
-//   left: 0;
-//   padding: var(--spacing-l);
-//   position: absolute;
-//   top: 0;
-// }
-
-// .card__category {
-//   color: white;
-//   font-size: 0.9rem;
-//   margin-bottom: var(--spacing-s);
-//   text-transform: uppercase;
-// }
-
-// .card__heading {
-//   color: rgb(99, 212, 212);
-//   font-size: 1.9rem;
-//   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-//   line-height: 1.4;
-//   word-spacing: 100vw;
-// }
-
-// new scss
-
-// @import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/library.less");
-// @import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/variables.less");
-// .container-fluid {
-//   width: 100%;
-// }
-// .media {
-//   background-position: center;
-//   background-size: cover;
-//   height: 100%;
-//   position: absolute;
-//   transition: all 0.3s ease;
-//   width: 100%;
-// }
-// figure {
-//   height: 370px;
-//   overflow: hidden;
-//   position: relative;
-//   a {
-//     height: 100%;
-//     left: 0;
-//     position: absolute;
-//     top: 0;
-//     width: 100%;
-//     z-index: 3;
-//   }
-//   &:hover {
-//     .media {
-//       transform: scale(1.25);
-//     }
-//   }
-// }
-// figcaption {
-//   color: #252830;
-//   height: calc(100% - 30px);
-//   margin: 15px;
-//   left: 0;
-//   position: absolute;
-//   top: 0;
-//   width: 250px;
-// }
-
-// svg {
-//   height: inherit;
-//   width: 100%;
-//   text {
-//     text-anchor: middle;
-//   }
-//   #alpha {
-//     fill: white;
-//   }
-//   .title {
-//     font-size: 28px;
-//     font-family: "Montserrat";
-//     letter-spacing: 5px;
-//   }
-//   #base {
-//     fill: white;
-//     -webkit-mask: url(#mask);
-//     mask: url(#mask);
-//   }
-// }
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
 
 .headingColor {
@@ -258,11 +67,11 @@
       }
     }
 
-    .selected-card{
+    .selected-card {
       // background-color: green;
-      color:green
+      color: green;
     }
-    .not-selected-card{
+    .not-selected-card {
       background-color: transparent;
     }
 
@@ -294,12 +103,7 @@
     color: #fca311;
   }
 }
-// .cards1:hover > .card-sports:hover {
-//   background-image: url("../../assets/sports.jpg");
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   background-position: center;
-// }
+
 .cards1:hover > .cards:not(:hover) {
   opacity: 0.5;
 }
@@ -308,13 +112,11 @@
 @import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/variables.less");
 $body: #252830;
 body {
-  // background-color: $body;
   color: white;
   font-family: "Lato";
 }
 
 .container-fluid {
-  // @include center;
   width: 100%;
 }
 
@@ -392,14 +194,6 @@ svg {
   box-sizing: border-box;
   font-weight: normal;
 }
-
-// body {
-//   color: #555;
-//   background: rgb(199, 174, 174);
-//   text-align: center;
-//   font-family: "Roboto Mono";
-//   padding: 1em;
-// }
 
 h1 {
   font-size: 2.2em;
