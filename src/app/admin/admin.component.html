@@ -1,51 +1,44 @@
-<div class="Admin" style="height: 100%; margin: 50px;" >
-
-
-
+<div class="Admin"  >
     <div  class="Users">
 
-        <h1 class="headingColor text-center">
-            <span>U</span>sers
+        <h1 class="headingColor text-center mb-5 ">
+            <span>E</span>weekly <span>U</span>sers
         </h1>
 
         <div class="row">
+            <div class="col-md-4" *ngFor=" let user of users" id="mat-card-div">
 
-            <div class="col-md-4" *ngFor=" let user of users">
-                <mat-card class="example-card"  style="border: solid; border-color: #fca311;">
-                    <mat-card-header style="display: flex; justify-content: space-between;">
+                <mat-card class="example-card" style="padding: 10px;">
+                    <mat-card-header >
+
                       <mat-card-subtitle>USER</mat-card-subtitle>
-                      <mat-card-title>{{user.name}}</mat-card-title>
+
+                      <mat-card-title>{{user.name | uppercase}} </mat-card-title>
+
                       <div class="div" >
                         <img src="../assets/UserAvatar.svg" alt=""  >
                       </div>
-                      
+
                     </mat-card-header>
+
                     <mat-card-content>
                       
-                      <p> {{user.phone}} <br>
-                      <P>{{user.email}}</P>
-                      
+                      <p> CONTACT NUMBER :- {{user.phone}} <br>
+                      <P> CONTACT EMAIL:- {{user.email | uppercase}}</P>
                       
                       <mat-divider></mat-divider>
                     </mat-card-content>
+
                     <mat-card-actions>
                       <button class="btn btn-danger" (click)="delete(user.email)" >DELETE</button>
-                      
                     </mat-card-actions>
-                    <mat-card-footer>
-                     
-                    </mat-card-footer>
+
+                    <mat-card-footer></mat-card-footer>
                   </mat-card>
+
                   <br>
                   <br>
-                  
             </div>
-            
-
         </div>
-        
-        
-
     </div>
-
 </div>
