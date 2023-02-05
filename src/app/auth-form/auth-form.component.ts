@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormControl,FormBuilder,Validators} from '@angular/forms';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-auth-form',
@@ -7,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./auth-form.component.css']
 })
 export class AuthFormComponent {
+  @Output() navRefresh = new EventEmitter<boolean>();
   name:string="";
   email:string="";
   contact:string="";
@@ -14,9 +17,29 @@ export class AuthFormComponent {
   loginemail:string="";
   loginpassword:string="";
 activeClass : boolean 
-constructor(public http:HttpClient){
+constructor(public http:HttpClient,public fb: FormBuilder,private router: Router){
 this.activeClass = false
 }
+
+ngOnInit(){
+  if(localStorage.getItem("eweekly_user")!=null){
+    this.router.navigate(['main/blog']);
+  }
+  if(localStorage.getItem("eweekly_user")==null){
+    // this.isLoggedIn = false;
+  }
+}
+
+signupForm = this.fb.group({
+  name: ['',[Validators.required,Validators.minLength(2)]],
+  email: ['',[Validators.required,Validators.email]],
+  contact: ['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+  password: ['',[Validators.required,Validators.minLength(8)]]
+})
+loginForm = this.fb.group({
+  loginemail: ['',[Validators.required,Validators.email]],
+  loginpassword: ['',[Validators.required,Validators.minLength(8)]]
+})
 signup(){
   let body = {
     "name":this.name,
@@ -46,8 +69,10 @@ login(){
     this.loginemail="";
     this.loginpassword="";
     this.setLocalStorage(res);
-    alert("form submitted");
+    // this.navRefresh.emit(true)
     window.location.reload();
+    alert("form submitted");
+    // this.router.navigate(['main/blog']);
   })
 }
 setLocalStorage(res:any){

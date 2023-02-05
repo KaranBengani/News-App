@@ -77,6 +77,10 @@
               required
               formControlName="subject"
             />
+            <div *ngIf="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].dirty || contactForm.controls['subject'].touched)"
+              class="alert alert-danger">
+                  Message is required.
+          </div>
           </div>
           <!-- <div>
                 <input
@@ -96,9 +100,13 @@
               required
               formControlName="desc"
             ></textarea>
+            <div *ngIf="contactForm.controls['desc'].invalid && (contactForm.controls['desc'].dirty || contactForm.controls['desc'].touched)"
+              class="alert alert-danger">
+                  Message is required.
+          </div>
           </div>
           <div class="submit-button-wrapper">
-            <input type="submit" (click)="contactSubmit()"/>
+            <input type="submit" [disabled]="contactForm.pristine || contactForm.invalid" (click)="contactSubmit()"/>
           </div>
         </form>
       </div>

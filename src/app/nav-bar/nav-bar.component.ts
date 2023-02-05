@@ -24,23 +24,23 @@ export class NavBarComponent {
     this.store.category = cat;
     console.log(this.store.category)
     this.navLinkEvent.emit('news')
-    this.router.navigate(['blog'])
+    this.router.navigate(['main/blog'])
   }
   navAbout(){
     this.navLinkEvent.emit('about')
-    this.router.navigate(['about'])
+    this.router.navigate(['main/about'])
   }
   navPhoto(){
     this.navLinkEvent.emit('photo')
-    this.router.navigate(['photo'])
+    this.router.navigate(['main/photo'])
   }
   navLog(){
     this.navLinkEvent.emit('log')
-    this.router.navigate(['auth'])
+    this.router.navigate(['main/auth'])
   }
   navAdmin(){
     this.navLinkEvent.emit('admin')
-    this.router.navigate(['admin'])
+    this.router.navigate(['main/admin'])
   }
   ngOnInit(blog:any){
   this.activeClass = false

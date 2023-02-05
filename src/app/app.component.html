@@ -1,12 +1,8 @@
 <div class="userSide">
-  <div class="entryPage" *ngIf="checkView">
-    <div class="hero-landing">
-      <app-hero-landing></app-hero-landing>
-    </div>
-    <div class="news-paper">
-      <app-news-paper (navEvent)="viewMenu($event)"></app-news-paper>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
+  <!-- <div class="entryPage" *ngIf="checkView">
+    <app-entry></app-entry>
+  </div> -->
   <!-- <div *ngIf="!checkView">
     <div class="nav-bar sticky-top">
       <app-nav-bar
@@ -33,11 +29,9 @@
       <app-footer></app-footer>
     </div>
   </div> -->
-  <div *ngIf="!checkView">
-    <app-nav-bar></app-nav-bar>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </div>
+  <!-- <div *ngIf="!checkView">
+    <app-main></app-main>
+  </div> -->
 </div>
 <!-- <router-outlet></router-outlet> -->
 <!-- <app-photo-gallery></app-photo-gallery> -->

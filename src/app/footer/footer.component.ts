@@ -31,6 +31,7 @@ constructor(public fb: FormBuilder, private http: HttpClient){}
     "subject": this.contactForm.value.subject,
     "bod": this.contactForm.value.desc
   }
+  alert("form submitted");
   this.http.post("http://localhost:3000/users/adminMail",body).subscribe( res => {
     console.log(res)
   })

@@ -24,6 +24,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EntryComponent } from './entry/entry.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     BlogmodalComponent,
     AuthFormComponent,
-    AdminComponent
+    AdminComponent,
+    EntryComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

@@ -16,9 +16,17 @@
       <div class="formbox">
         <div class="form">
           <h2>Signin</h2>
-          <input type="text" [(ngModel)]="loginemail" placeholder="email" />
-          <input type="password" [(ngModel)]="loginpassword" placeholder="Password" />
-          <input type="submit" (click)="login()" value="Login" />
+          <form [formGroup]="loginForm" novalidate>
+            <input type="text" formControlName="loginemail" [(ngModel)]="loginemail" placeholder="email" />
+            <div *ngIf="loginForm.controls['loginemail'].invalid && (loginForm.controls['loginemail'].dirty || loginForm.controls['loginemail'].touched)" class="alert alert-danger">
+                  email is invalid
+            </div>
+            <input type="password" formControlName="loginpassword" [(ngModel)]="loginpassword" placeholder="Password" />
+            <div *ngIf="loginForm.controls['loginpassword'].invalid && (loginForm.controls['loginpassword'].dirty || loginForm.controls['loginpassword'].touched)" class="alert alert-danger">
+                  Password should be minimum 8 characters
+            </div>
+            <input type="submit" [disabled]="loginForm.pristine || loginForm.invalid" (click)="login()" value="Login" />
+          </form>
           <p class="signup-text">
             Don't have an account?
             <a (click)="toggleForm()">Signup</a>
@@ -33,14 +41,28 @@
       <div class="formbox">
         <div class="form">
           <h2>Signup</h2>
-          <input type="text" [(ngModel)]="name" placeholder="Name"/>
-          <input type="email" [(ngModel)]="email" placeholder="Email" />
-          <input type="number" [(ngModel)]="contact" placeholder="Contact" />
-          <input type="password" [(ngModel)]="password" placeholder="Password" />
-          <input type="submit" (click)="signup()" value="Signup" />
+          <form [formGroup]="signupForm" novalidate>
+            <input type="text" [(ngModel)]="name" formControlName="name" placeholder="Name"/>
+            <div *ngIf="signupForm.controls['name'].invalid && (signupForm.controls['name'].dirty || signupForm.controls['name'].touched)" class="alert alert-danger">
+                  Name is invalid
+            </div>
+            <input type="email" [(ngModel)]="email" formControlName="email" placeholder="Email" />
+            <div *ngIf="signupForm.controls['email'].invalid && (signupForm.controls['email'].dirty || signupForm.controls['email'].touched)" class="alert alert-danger">
+                  Email is invalid
+            </div>
+            <input type="text" [(ngModel)]="contact" formControlName="contact" placeholder="Contact" />
+            <div *ngIf="signupForm.controls['contact'].invalid && (signupForm.controls['contact'].dirty || signupForm.controls['contact'].touched)" class="alert alert-danger">
+                  Phone number should be 10 digits
+            </div>
+            <input type="password" [(ngModel)]="password" formControlName="password" placeholder="Password" />
+            <div *ngIf="signupForm.controls['password'].invalid && (signupForm.controls['password'].dirty || signupForm.controls['password'].touched)" class="alert alert-danger">
+                  Password should be minimum 8 characters
+            </div>
+            <input [disabled]="signupForm.pristine || signupForm.invalid" type="submit" (click)="signup()" value="Signup" />
+          </form>
           <p class="signup-text">
             Already have an account?
-            <a (click)="toggleForm()">Login</a>
+            <a  (click)="toggleForm()">Login</a>
           </p>
         </div>
       </div>

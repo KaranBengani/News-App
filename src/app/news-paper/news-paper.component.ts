@@ -16,7 +16,7 @@ export class NewsPaperComponent {
   }
   navClick(){
     this.navEvent.emit(false);
-    this.router.navigate(['blog'])
+    this.router.navigate(['main'])
     this.showUp()
   }
 }
