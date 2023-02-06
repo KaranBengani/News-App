@@ -97,7 +97,7 @@ html {
   margin-left: 2rem;
 }
 .welcomeText span {
-  color: #14213D;
+  color: #14213d;
 }
 .welcomeAnimation {
   opacity: 1;
@@ -180,7 +180,7 @@ html {
   font-size: 280px;
   /* color: #e5e5e5; */
   color: transparent;
-  -webkit-text-stroke: 4px #FCA311;
+  -webkit-text-stroke: 4px #fca311;
   text-transform: uppercase;
   display: inline-block;
   line-height: 0.75;
@@ -188,9 +188,9 @@ html {
   font-weight: 800;
 }
 
-.bg-text-container::-webkit-scrollbar{
+.bg-text-container::-webkit-scrollbar {
   display: none;
 }
-.bg-text-container{
+.bg-text-container {
   width: 100%;
 }

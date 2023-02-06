@@ -19,4 +19,8 @@ export class NewsPaperComponent {
     this.router.navigate(['main'])
     this.showUp()
   }
+  teamClick(){
+    this.router.navigate(['main/about'])
+    this.showUp()
+  }
 }
