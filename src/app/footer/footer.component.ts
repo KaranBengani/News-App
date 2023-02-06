@@ -53,10 +53,10 @@ export class FooterComponent {
   }
   NavigateAbout() {
     this.router.navigate(['main/about']);
-    this.showUp;
+    this.showUp();
   }
   NavigateGallery() {
     this.router.navigate(['main/photo']);
-    this.showUp;
+    this.showUp();
   }
 }
