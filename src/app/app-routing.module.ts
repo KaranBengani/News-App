@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { AuthFormComponent } from './auth-form/auth-form.component';
 import { EntryComponent } from './entry/entry.component';
 import { MainComponent } from './main/main.component';
+import { AuthguardGuard } from './shared/authguard.guard';
 
 const routes: Routes = [
   {path:'', redirectTo: '/entry', pathMatch: 'full'},
@@ -17,7 +18,7 @@ const routes: Routes = [
     {path: 'photo', component: PhotoGalleryComponent},
     {path: 'about', component: AboutComponent},
     {path: "auth", component: AuthFormComponent},
-    {path: "admin", component: AdminComponent}
+    {path: "admin", component: AdminComponent, canActivate:[AuthguardGuard]}
   ]},
 ];
 
