@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
+## Steps for running the code
+
+### Frontend
+
+- Clone this repository.
+- 'npm install' to install the packages.
+- 'ng serve' to run application.
+
+### Backend
+
+- Clone repository again in new folder.
+- 'git checkout backend' to go to backend code
+- 'npm install' to install the packages.
+- 'npm start' to run application.
+
+### PostgreSQL
+
+- From the backend folder take backend.sql file
+- import it inside the pg admin
+- In backend:/routes/users.js alter the client(Postgres) credentials with you own.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
