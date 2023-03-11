@@ -17,6 +17,7 @@ export class NavBarComponent {
   activeClass: boolean = false;
   isLoggedIn = false;
   admin = false;
+  cart = false;
 
   constructor(public store: StoreService, private router: Router) {}
 
@@ -41,22 +42,32 @@ export class NavBarComponent {
     this.navLinkEvent.emit('log');
     this.router.navigate(['main/auth']);
   }
+  navProduct() {
+    this.navLinkEvent.emit('product');
+    this.router.navigate(['main/product']);
+  }
+  navCart() {
+    this.navLinkEvent.emit('cart');
+    this.router.navigate(['main/cart']);
+  }
   navAdmin() {
     this.navLinkEvent.emit('admin');
     this.router.navigate(['main/admin']);
   }
+  
   ngOnInit(blog: any) {
     this.activeClass = false;
-    console.log(localStorage.getItem('eweekly_user'));
-    if (localStorage.getItem('eweekly_user') != null) {
+    console.log(localStorage.getItem('user'));
+    if (localStorage.getItem('user') != null) {
       this.isLoggedIn = true;
       this.admin = false;
+      this.cart = true;
     }
-    if (localStorage.getItem('eweekly_user') == 'admin@admin.com') {
+    if (localStorage.getItem('user') == 'admin@admin.com') {
       this.isLoggedIn = true;
       this.admin = true;
     }
-    if (localStorage.getItem('eweekly_user') == null) {
+    if (localStorage.getItem('user') == null) {
       this.isLoggedIn = false;
     }
   }
@@ -66,9 +77,10 @@ export class NavBarComponent {
   }
 
   logout() {
-    localStorage.removeItem('eweekly_user');
+    localStorage.removeItem('user');
     this.isLoggedIn = false;
     this.admin = false;
+    this.cart=false;
     this.navLinkEvent.emit('news');
     this.router.navigate(['main/blog']);
     alert('You just logged out');

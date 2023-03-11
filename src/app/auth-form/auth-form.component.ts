@@ -22,10 +22,10 @@ this.activeClass = false
 }
 
 ngOnInit(){
-  if(localStorage.getItem("eweekly_user")!=null){
+  if(localStorage.getItem("user")!=null){
     this.router.navigate(['main/blog']);
   }
-  if(localStorage.getItem("eweekly_user")==null){
+  if(localStorage.getItem("user")==null){
     // this.isLoggedIn = false;
   }
 }
@@ -44,12 +44,13 @@ signup(){
   let body = {
     "name":this.name,
     "email":this.email,
-    "phone":this.contact,
+    "contact":this.contact,
     "password":this.password,
     "preferences":"",
     "status":""
   }
-  this.http.post("http://localhost:3000/users/newUser",body).subscribe(res=>{
+  let headers = { "Content-Type": "application/json" };
+  this.http.post("http://localhost:8000/api/users",body,{headers}).subscribe(res=>{
     console.log(res);
     this.name="";
     this.email="";
@@ -64,20 +65,30 @@ login(){
     "email":this.loginemail,
     "password":this.loginpassword
   }
-  this.http.post("http://localhost:3000/users/login",body).subscribe(res=>{
+  this.http.post("http://localhost:8000/api/users/login",body).subscribe((res:any)=>{
     console.log(res);
     this.loginemail="";
-    this.loginpassword="";
-    this.setLocalStorage(res);
-    // this.navRefresh.emit(true)
-    window.location.reload();
-    alert("form submitted");
-    // this.router.navigate(['main/blog']);
+    this.loginpassword = "";
+    if (res.success == true) {
+      this.setLocalStorage(res);
+      // this.router.navigate(['main/blog']);
+      window.location.reload();
+      // this.router.navigate(['main/blog']);
+      // this.router.navigate(['main/blog']);
+
+
+    // alert("form submitted");
+    }
+    
+
+    
+   
   })
 }
+  // console.log(localStorage.setItem("user_id",res););
 setLocalStorage(res:any){
-  localStorage.setItem("eweekly_user",res.data.email);
-  console.log(res.data.email);
+  localStorage.setItem("user",JSON.stringify(res));
+  console.log(res);
 }
 toggleForm(){
 this.activeClass= !this.activeClass

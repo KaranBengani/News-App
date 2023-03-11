@@ -65,7 +65,7 @@ selectedblog:any="hello";
   })
  }
  checkAuth(blog:any){
-  if(localStorage.getItem("eweekly_user")!=null){
+  if(localStorage.getItem("user")!=null){
     console.log(blog);
     this.selectedblog = blog;
     this.modal = false

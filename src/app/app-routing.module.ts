@@ -8,6 +8,8 @@ import { AuthFormComponent } from './auth-form/auth-form.component';
 import { EntryComponent } from './entry/entry.component';
 import { MainComponent } from './main/main.component';
 import { AuthguardGuard } from './shared/authguard.guard';
+import { CartComponent } from './order/cart/cart.component';
+import { ProductComponent } from './order/product/product.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/entry', pathMatch: 'full'},
@@ -17,9 +19,12 @@ const routes: Routes = [
     {path: 'blog', component: BlogComponent},
     {path: 'photo', component: PhotoGalleryComponent},
     {path: 'about', component: AboutComponent},
-    {path: "auth", component: AuthFormComponent},
-    {path: "admin", component: AdminComponent, canActivate:[AuthguardGuard]}
-  ]},
+    {path: 'product', component: ProductComponent},
+    {path: 'cart', component: CartComponent},
+    {path: "auth", component: AuthFormComponent}
+  ]
+  },
+  {path: "admin", component: AdminComponent, canActivate:[AuthguardGuard]}
 ];
 
 @NgModule({

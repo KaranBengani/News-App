@@ -3,7 +3,10 @@
     <div class="row headingChild">
       <div class="content col-12 col-md-6 pr-md-5">
         <h1 class="headingColor text-center">
-          <span>T</span>HE <span>E</span>WEEKLY
+          <div style="display: flex;flex-direction: column;row-gap: 12px;">
+            <div><span>T</span>HE</div>
+            <div><span>E</span>WEEKLY</div>
+          </div>
         </h1>
         <ngx-typed-js [strings]="['Amazing news on your fingertips']">
           <span class="typing"></span>
@@ -145,18 +148,13 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <img
-            src="../../assets/mission.jpg"
-            alt=""
-            class="img-fluid"
-            data-aos="fade-right"
-          />
+          <img src="../../assets/mission.jpg" alt="" class="img-fluid" data-aos="fade-right" />
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="team">
+<section id="team" data-aos="zoom-in-up">
   <div class="container">
     <div class="team-top text-center wow bounceIn">
       <h3 data-aos="zoom-out-up" class="headingColor">
@@ -165,73 +163,8 @@
       <p data-aos="zoom-out-up">Meet our amazing team</p>
     </div>
     <div class="team-content">
-      <div class="row">
-        <div
-          class="col-md-3 text-center wow bounceIn"
-          data-aos="zoom-out-left"
-          data-wow-duration="2s"
-        >
-          <div class="team-circle mb-3 karan"></div>
-          <h4>Karan Begani</h4>
-          <h5>Platform Engineer(Angular)</h5>
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fa fa-facebook-f" aria-hidden="true"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fa fa-pinterest" aria-hidden="true"></i>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="col-md-3 text-center wow bounceIn"
-          data-aos="zoom-out-right"
-          data-wow-duration="2s"
-        >
-          <div class="team-circle mb-3 hardik"></div>
-          <h4>Hardik Garg</h4>
-          <h5>Platform Engineer(Angular)</h5>
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fa fa-facebook-f" aria-hidden="true"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fa fa-pinterest" aria-hidden="true"></i>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="col-md-3 text-center wow bounceIn"
-          data-aos="zoom-out-left"
-          data-wow-duration="2s"
-        >
-          <div class="team-circle mb-3 prateek"></div>
-          <h4>Prateek Dhama</h4>
-          <h5>Platform Engineer(Angular)</h5>
-          <ul class="social-icons">
-            <li class="social-icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fa fa-facebook-f" aria-hidden="true"></i>
-            </li>
-            <li class="social-icon">
-              <i class="fa fa-pinterest" aria-hidden="true"></i>
-            </li>
-          </ul>
-        </div>
-
-        <div
-          class="col-md-3 text-center wow bounceIn"
-          data-aos="zoom-out-right"
-          data-wow-duration="2s"
-        >
+      <div class="row" style="display: flex; justify-content: space-between;">
+        <div class="col-md-3 text-center wow bounceIn" data-aos="zoom-out-right" data-wow-duration="2s">
           <div class="team-circle mb-3 tanishq"></div>
           <h4>Tanishq Shah</h4>
           <h5>Platform Engineer(PHP)</h5>
@@ -247,6 +180,39 @@
             </li>
           </ul>
         </div>
+        <div class="col-md-3 text-center wow bounceIn" data-aos="zoom-out-right" data-wow-duration="2s">
+          <div class="team-circle mb-3 hardik"></div>
+          <h4>ShreeHarsh Pandey</h4>
+          <h5>Platform Engineer(PHP)</h5>
+          <ul class="social-icons">
+            <li class="social-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </li>
+            <li class="social-icon">
+              <i class="fa fa-facebook-f" aria-hidden="true"></i>
+            </li>
+            <li class="social-icon">
+              <i class="fa fa-pinterest" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-center wow bounceIn" data-aos="zoom-out-left" data-wow-duration="2s">
+          <div class="team-circle mb-3 prateek"></div>
+          <h4>Piyush Parashrampuria</h4>
+          <h5>Platform Engineer(PHP)</h5>
+          <ul class="social-icons">
+            <li class="social-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </li>
+            <li class="social-icon">
+              <i class="fa fa-facebook-f" aria-hidden="true"></i>
+            </li>
+            <li class="social-icon">
+              <i class="fa fa-pinterest" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>

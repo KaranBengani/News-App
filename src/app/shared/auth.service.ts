@@ -7,7 +7,7 @@ export class AuthService {
 
   constructor() { }
   checkAuth(){
-    if (localStorage.getItem('eweekly_user') == 'admin@admin.com') {
+    if (localStorage.getItem('user') == 'admin@admin.com') {
       return true;
     }
     else{

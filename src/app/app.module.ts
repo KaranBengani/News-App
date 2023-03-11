@@ -27,6 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EntryComponent } from './entry/entry.component';
 import { MainComponent } from './main/main.component';
 import { SearchPipe } from './search.pipe';
+// import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './order/cart/cart.component';
+import { ProductComponent } from './order/product/product.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { SearchPipe } from './search.pipe';
     AdminComponent,
     EntryComponent,
     MainComponent,
-    SearchPipe
+    SearchPipe,
+    CartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
